@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#fcf9f8;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-container": "#ffd84d", "on-error": "#ffffff", "tertiary-fixed-dim": "#ffb4a5", "on-primary-fixed-variant": "#564500", "on-secondary-fixed-variant": "#004b72", "on-primary-container": "#735e00", "surface-variant": "#e5e2e1", "secondary": "#166392", "secondary-container": "#8bcafe", "outline": "#7e7662", "primary": "#725c00", "on-secondary-container": "#005581", "secondary-fixed-dim": "#90cdff", "inverse-primary": "#e9c339", "surface-container-highest": "#e5e2e1", "surface-container-high": "#eae7e7", "on-error-container": "#93000a", "on-surface-variant": "#4d4634", "on-tertiary-fixed": "#3e0500", "outline-variant": "#d0c6ae", "secondary-fixed": "#cbe6ff", "surface-dim": "#dcd9d9", "on-primary-fixed": "#231b00", "on-tertiary": "#ffffff", "on-secondary-fixed": "#001e31", "primary-fixed-dim": "#e9c339", "on-surface": "#1c1b1b", "on-background": "#1c1b1b", "tertiary-fixed": "#ffdad3", "on-secondary": "#ffffff", "error": "#ba1a1a", "tertiary-container": "#ffd1c8", "surface-container-low": "#f6f3f2", "on-tertiary-container": "#a63e29", "tertiary": "#a43c28", "surface": "#fcf9f8", "surface-container-lowest": "#ffffff", "on-primary": "#ffffff", "inverse-on-surface": "#f3f0ef", "surface-tint": "#725c00", "surface-container": "#f0eded", "primary-fixed": "#ffe07e", "surface-bright": "#fcf9f8", "inverse-surface": "#313030", "background": "#fcf9f8", "on-tertiary-fixed-variant": "#842513", "error-container": "#ffdad6" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "1rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "gutter-sm": "0.75rem", "margin-tablet": "1.5rem", "gutter": "1rem", "space-xl": "2rem", "margin": "1rem", "space-lg": "1.5rem" }, "fontFamily": { "label-md": ["Space Grotesk"], "headline-sm": ["Space Grotesk"], "label-lg": ["Space Grotesk"], "body-sm": ["Inter"], "headline-xl": ["Space Grotesk"], "body-lg": ["Inter"], "headline-lg": ["Space Grotesk"], "body-md": ["Inter"], "headline-lg-mobile": ["Space Grotesk"], "label-sm": ["Space Grotesk"], "headline-md": ["Space Grotesk"], "headline-xl-mobile": ["Space Grotesk"] }, "fontSize": { "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "700" }], "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-lg": ["15px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "500" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-lg-mobile": ["24px", { "lineHeight": "30px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-xl-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }] } } } }</script></head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center justify-between px-space-md h-6 text-on-surface text-label-sm font-label-sm select-none"><span class="tracking-tight font-bold">09:41</span><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[15px]">wifi</span><span class="material-symbols-outlined text-[15px]">signal_cellular_4_bar</span><span class="material-symbols-outlined text-[15px]">battery_charging_full</span></div></div><div class="h-14 px-space-md flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs min-w-0"><button aria-label="Kembali" class="w-11 h-11 -ml-2 flex items-center justify-center rounded-full text-on-surface active:bg-surface-variant transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><img alt="DAYGUIDE App Logo" class="h-7 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/ALJJyrC0v238Bvh5B9-U1T4bw7ZV1j71QlPF1EHtmPOWTzVW1eq6CwOh1fXmNE3fMnAum0cV1B93UqA2rrllJZyWe0wBWyKBdjDX024xuw0tgPa9hGK7fgzB2DsvGTApIVdPqEaL-rlUt_HU11uUZd91f7kT32xLT-ZhPdGrWw4Q33FmXhgHxmKFgSMuWqUDPlSWTx-yQK2dLgmOS2PBRcA2olaxdps_s3XNokQBJUNcHaBo"/><h1 class="font-headline-sm text-headline-sm text-on-surface truncate ml-1">Detail Panduan</h1></div><div class="flex items-center gap-space-xs flex-shrink-0"><button aria-label="Bagikan Panduan" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface active:bg-surface-variant transition-colors"><span class="material-symbols-outlined text-[22px]">share</span></button><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIxHDkKgPcTB3GyRzCjWZ_SYFLjkriFyDRgmluJZ33erXy78qejs08Qh1Ozi_Sjqc7TFtN-_3pU1WwqUmZXHM_lu91SWjW3lmQzoFOhRHBFzm8QmbbK4hWWSVBFwW7jhntz_B0jBCjnSFx802UpKEJED5uQUy_Mg_uZ1jmlZP1xp7L3baZzX2aTVsYIV7hw73rANkIzoQJvyU3DfxDlE1VSZgGVONwTJpAkia-p_c"/></div></div></header><main class="flex flex-col relative w-full pt-20 pb-safe px-space-md bg-surface flex-grow"><div class="flex flex-col w-full pb-8 space-y-space-md">
+<!-- 1. CATEGORY HERO BANNER -->
+<section class="relative w-full rounded-2xl p-space-md bg-[#6EE7B7] text-[#171717] border-[3px] border-[#171717] shadow-[4px_4px_0px_#171717] overflow-hidden">
+<!-- Playful Floating Emojis / Decorative Accents -->
+<div class="absolute -right-2 -top-2 flex items-center gap-1 opacity-90 select-none pointer-events-none rotate-6">
+<span class="text-3xl drop-shadow-[2px_2px_0px_#171717]">☕</span>
+<span class="text-4xl drop-shadow-[2px_2px_0px_#171717]">☀️</span>
+<span class="text-3xl drop-shadow-[2px_2px_0px_#171717]">🍳</span>
+</div>
+<!-- Badge Tag -->
+<div class="inline-flex items-center gap-1.5 px-3 py-1 mb-space-sm bg-surface-container-lowest text-[#171717] rounded-full border-[2px] border-[#171717] shadow-[2px_2px_0px_#171717]">
+<span class="material-symbols-outlined text-[16px] text-tertiary font-bold">category</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Kategori Esensial</span>
+</div>
+<!-- Title & Description -->
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile tracking-tight text-[#171717] mb-space-xs pr-16">
+      Kehidupan Sehari-hari
+    </h2>
+<p class="font-body-md text-body-md text-[#171717]/90 leading-relaxed mb-space-md">
+      Koleksi panduan praktis untuk mempermudah rutinitas, efisiensi waktu, dan meningkatkan kualitas hidup harian Anda.
+    </p>
+<!-- Stats Pill -->
+<div class="inline-flex flex-wrap items-center gap-2 px-3 py-1.5 bg-[#171717] text-white rounded-xl">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary-container">menu_book</span>
+<span class="font-label-sm text-label-sm text-white">64 Panduan</span>
+</div>
+<span class="text-white/40">•</span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-[#6EE7B7]">group</span>
+<span class="font-label-sm text-label-sm text-white">12.4k Pembaca</span>
+</div>
+</div>
+</section>
+<!-- 2. SEARCH & FILTER BAR -->
+<section class="flex flex-col w-full space-y-space-sm">
+<!-- Quick Search Input -->
+<div class="relative w-full">
+<div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-on-surface">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="w-full pl-10 pr-10 py-3 bg-surface-container-lowest text-on-surface placeholder:text-on-surface/50 rounded-xl border-[2.5px] border-[#171717] shadow-[2.5px_2.5px_0px_#171717] focus:outline-none focus:shadow-[4px_4px_0px_#171717] transition-all font-body-md text-body-md" placeholder="Cari dalam kategori ini..." type="search"/>
+<button aria-label="Hapus Pencarian" class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-on-surface active:scale-95">
+<span class="material-symbols-outlined text-[18px] opacity-40">tune</span>
+</button>
+</div>
+<!-- Filter Pill Buttons Rack (Scrollable) -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1.5 pt-0.5 no-scrollbar -mx-1 px-1">
+<!-- Filter 1: Active Pill -->
+<button class="flex items-center gap-1.5 px-3 py-1.5 bg-[#171717] text-white rounded-full border-[2px] border-[#171717] shadow-[2px_2px_0px_#FFD84D] active:translate-x-0.5 active:translate-y-0.5 whitespace-nowrap flex-shrink-0 transition-transform">
+<span class="font-label-sm text-label-sm">Tingkat: Semua</span>
+<span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+<!-- Filter 2: Sort -->
+<button class="flex items-center gap-1.5 px-3 py-1.5 bg-surface-container-lowest text-on-surface rounded-full border-[2px] border-[#171717] shadow-[2px_2px_0px_#171717] active:translate-x-0.5 active:translate-y-0.5 whitespace-nowrap flex-shrink-0 transition-transform">
+<span class="material-symbols-outlined text-[16px] text-tertiary">local_fire_department</span>
+<span class="font-label-sm text-label-sm">Urutkan: Terpopuler</span>
+<span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+<!-- Filter 3: Duration -->
+<button class="flex items-center gap-1.5 px-3 py-1.5 bg-surface-container-lowest text-on-surface rounded-full border-[2px] border-[#171717] shadow-[2px_2px_0px_#171717] active:translate-x-0.5 active:translate-y-0.5 whitespace-nowrap flex-shrink-0 transition-transform">
+<span class="material-symbols-outlined text-[16px] text-secondary">schedule</span>
+<span class="font-label-sm text-label-sm">Durasi</span>
+<span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+<!-- Filter 4: Bookmarked Only -->
+<button class="flex items-center gap-1 px-3 py-1.5 bg-surface-container-lowest text-on-surface rounded-full border-[2px] border-[#171717] shadow-[2px_2px_0px_#171717] active:translate-x-0.5 active:translate-y-0.5 whitespace-nowrap flex-shrink-0 transition-transform">
+<span class="material-symbols-outlined text-[16px] text-primary">bookmark</span>
+<span class="font-label-sm text-label-sm">Tersimpan</span>
+</button>
+</div>
+</section>
+<!-- 3. LIST OF AVAILABLE GUIDES -->
+<section class="flex flex-col w-full space-y-3.5">
+<!-- Card 1: Pomodoro -->
+<article class="relative flex flex-col bg-surface-container-lowest rounded-2xl border-[2.5px] border-[#171717] shadow-[3.5px_3.5px_0px_#171717] p-space-md transition-all active:translate-x-0.5 active:translate-y-0.5 active:shadow-[1px_1px_0px_#171717]">
+<div class="flex items-start justify-between gap-3 mb-2">
+<!-- Thumbnail / Badge -->
+<div class="w-12 h-12 rounded-xl bg-primary-container border-[2px] border-[#171717] shadow-[2px_2px_0px_#171717] flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[26px] text-on-primary-container" style="font-variation-settings: 'FILL' 1;">timer</span>
+</div>
+<div class="flex-1 min-w-0 pt-0.5">
+<div class="inline-flex items-center px-2 py-0.5 mb-1 rounded-md bg-[#C4B5FD] text-[#171717] border-[1.5px] border-[#171717] font-label-sm text-label-sm">
+            Manajemen Waktu
+          </div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-snug line-clamp-2">
+            Cara Mengatur Waktu dengan Metode Pomodoro &amp; Time Boxing
+          </h3>
+</div>
+<!-- Bookmark Button (Filled Yellow State) -->
+<button aria-label="Simpan Panduan" class="w-10 h-10 rounded-xl bg-primary-container border-[2px] border-[#171717] shadow-[2px_2px_0px_#171717] flex items-center justify-center text-[#171717] active:scale-95 flex-shrink-0" onclick="toggleBookmark(this)">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+</button>
+</div>
+<!-- Micro tags / Metadata Pill Row -->
+<div class="flex flex-wrap items-center gap-1.5 pt-2 mt-1 border-t-[1.5px] border-dashed border-[#171717]/20 text-on-surface">
+<span class="inline-flex items-center gap-1 text-label-sm font-label-sm bg-surface-container px-2 py-0.5 rounded border border-[#171717]">
+<span>⏱️</span> 4 mnt
+        </span>
+<span class="inline-flex items-center gap-1 text-label-sm font-label-sm bg-[#8CCBFF] text-[#171717] px-2 py-0.5 rounded border border-[#171717]">
+<span>📊</span> Pemula
+        </span>
+<span class="inline-flex items-center gap-1 text-label-sm font-label-sm bg-surface-container px-2 py-0.5 rounded border border-[#171717]">
+<span class="text-primary font-bold">⭐</span> 4.9
+        </span>
+<span class="text-body-sm font-body-sm text-on-surface-variant ml-auto">
+          3.2k baca
+        </span>
+</div>
+</article>
+<!-- Card 2: Meal Prep -->
+<article class="relative flex flex-col bg-surface-container-lowest rounded-2xl border-[2.5px] border-[#171717] shadow-[3.5px_3.5px_0px_#171717] p-space-md transition-all active:translate-x-0.5 active:translate-y-0.5 active:shadow-[1px_1px_0px_#171717]">
+<div class="flex items-start justify-between gap-3 mb-2">
+<div class="w-12 h-12 rounded-xl bg-[#6EE7B7] border-[2px] border-[#171717] shadow-[2px_2px_0px_#171717] flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[26px] text-[#171717]" style="font-variation-settings: 'FILL' 1;">restaurant</span>
+</div>
+<div class="flex-1 min-w-0 pt-0.5">
+<div class="inline-flex items-center px-2 py-0.5 mb-1 rounded-md bg-secondary-fixed text-on-secondary-fixed border-[1.5px] border-[#171717] font-label-sm text-label-sm">
+            Nutrisi &amp; Dapur
+          </div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-snug line-clamp-2">
+            Panduan Meal Prep Hemat untuk 1 Minggu Penuh
+          </h3>
+</div>
+<!-- Bookmark Button (Outline State) -->
+<button aria-label="Simpan Panduan" class="w-10 h-10 rounded-xl bg-surface-container-lowest border-[2px] border-[#171717] shadow-[2px_2px_0px_#171717] flex items-center justify-center text-on-surface active:scale-95 flex-shrink-0" onclick="toggleBookmark(this)">
+<span class="material-symbols-outlined text-[20px]">bookmark_border</span>
+</button>
+</div>
+<!-- Micro tags -->
+<div class="flex flex-wrap items-center gap-1.5 pt-2 mt-1 border-t-[1.5px] border-dashed border-[#171717]/20 text-on-surface">
+<span class="inline-flex items-center gap-1 text-label-sm font-label-sm bg-surface-container px-2 py-0.5 rounded border border-[#171717]">
+<span>⏱️</span> 8 mnt
+        </span>
+<span class="inline-flex items-center gap-1 text-label-sm font-label-sm bg-[#FFD84D] text-[#171717] px-2 py-0.5 rounded border border-[#171717]">
+<span>📊</span> Menengah
+        </span>
+<span class="inline-flex items-center gap-1 text-label-sm font-label-sm bg-surface-container px-2 py-0.5 rounded border border-[#171717]">
+<span class="text-primary font-bold">⭐</span> 4.8
+        </span>
+<span class="text-body-sm font-body-sm text-on-surface-variant ml-auto">
+          4.1k baca
+        </span>
+</div>
+</article>
+<!-- Card 3: Noda Pakaian -->
+<article class="relative flex flex-col bg-surface-container-lowest rounded-2xl border-[2.5px] border-[#171717] shadow-[3.5px_3.5px_0px_#171717] p-space-md transition-all active:translate-x-0.5 active:translate-y-0.5 active:shadow-[1px_1px_0px_#171717]">
+<div class="flex items-start justify-between gap-3 mb-2">
+<div class="w-12 h-12 rounded-xl bg-tertiary-container border-[2px] border-[#171717] shadow-[2px_2px_0px_#171717] flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[26px] text-tertiary" style="font-variation-settings: 'FILL' 1;">local_laundry_service</span>
+</div>
+<div class="flex-1 min-w-0 pt-0.5">
+<div class="inline-flex items-center px-2 py-0.5 mb-1 rounded-md bg-[#FFDAD3] text-on-tertiary-container border-[1.5px] border-[#171717] font-label-sm text-label-sm">
+            Perawatan Rumah
+          </div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-snug line-clamp-2">
+            Cara Menghilangkan Noda Pakaian Membandel Tanpa Rusak Serat
+          </h3>
+</div>
+<!-- Bookmark Button -->
+<button aria-label="Simpan Panduan" class="w-10 h-10 rounded-xl bg-surface-container-lowest border-[2px] border-[#171717] shadow-[2px_2px_0px_#171717] flex items-center justify-center text-on-surface active:scale-95 flex-shrink-0" onclick="toggleBookmark(this)">
+<span class="material-symbols-outlined text-[20px]">bookmark_border</span>
+</button>
+</div>
+<!-- Micro tags -->
+<div class="flex flex-wrap items-center gap-1.5 pt-2 mt-1 border-t-[1.5px] border-dashed border-[#171717]/20 text-on-surface">
+<span class="inline-flex items-center gap-1 text-label-sm font-label-sm bg-surface-container px-2 py-0.5 rounded border border-[#171717]">
+<span>⏱️</span> 3 mnt
+        </span>
+<span class="inline-flex items-center gap-1 text-label-sm font-label-sm bg-[#6EE7B7] text-[#171717] px-2 py-0.5 rounded border border-[#171717]">
+<span>📊</span> Sangat Mudah
+        </span>
+<span class="inline-flex items-center gap-1 text-label-sm font-label-sm bg-surface-container px-2 py-0.5 rounded border border-[#171717]">
+<span class="text-primary font-bold">⭐</span> 4.7
+        </span>
+<span class="text-body-sm font-body-sm text-on-surface-variant ml-auto">
+          1.9k baca
+        </span>
+</div>
+</article>
+<!-- Card 4: Bangun Pagi -->
+<article class="relative flex flex-col bg-surface-container-lowest rounded-2xl border-[2.5px] border-[#171717] shadow-[3.5px_3.5px_0px_#171717] p-space-md transition-all active:translate-x-0.5 active:translate-y-0.5 active:shadow-[1px_1px_0px_#171717]">
+<div class="flex items-start justify-between gap-3 mb-2">
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed border-[2px] border-[#171717] shadow-[2px_2px_0px_#171717] flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[26px] text-secondary" style="font-variation-settings: 'FILL' 1;">wb_sunny</span>
+</div>
+<div class="flex-1 min-w-0 pt-0.5">
+<div class="inline-flex items-center px-2 py-0.5 mb-1 rounded-md bg-[#FFE07E] text-[#171717] border-[1.5px] border-[#171717] font-label-sm text-label-sm">
+            Kebiasaan Sehat
+          </div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-snug line-clamp-2">
+            Teknik Membangun Kebiasaan Bangun Pagi Tanpa Mengantuk
+          </h3>
+</div>
+<!-- Bookmark Button -->
+<button aria-label="Simpan Panduan" class="w-10 h-10 rounded-xl bg-surface-container-lowest border-[2px] border-[#171717] shadow-[2px_2px_0px_#171717] flex items-center justify-center text-on-surface active:scale-95 flex-shrink-0" onclick="toggleBookmark(this)">
+<span class="material-symbols-outlined text-[20px]">bookmark_border</span>
+</button>
+</div>
+<!-- Micro tags -->
+<div class="flex flex-wrap items-center gap-1.5 pt-2 mt-1 border-t-[1.5px] border-dashed border-[#171717]/20 text-on-surface">
+<span class="inline-flex items-center gap-1 text-label-sm font-label-sm bg-surface-container px-2 py-0.5 rounded border border-[#171717]">
+<span>⏱️</span> 6 mnt
+        </span>
+<span class="inline-flex items-center gap-1 text-label-sm font-label-sm bg-[#8CCBFF] text-[#171717] px-2 py-0.5 rounded border border-[#171717]">
+<span>📊</span> Pemula
+        </span>
+<span class="inline-flex items-center gap-1 text-label-sm font-label-sm bg-surface-container px-2 py-0.5 rounded border border-[#171717]">
+<span class="text-primary font-bold">⭐</span> 4.9
+        </span>
+<span class="text-body-sm font-body-sm text-on-surface-variant ml-auto">
+          5.0k baca
+        </span>
+</div>
+</article>
+</section>
+<!-- 4. LOAD MORE & PAGINATION INDICATOR -->
+<section class="flex flex-col items-center justify-center pt-2 pb-4 space-y-3">
+<!-- Tactile Load More Button -->
+<button class="w-full py-3.5 px-4 bg-surface-container-lowest text-on-surface font-headline-sm text-headline-sm rounded-xl border-[2.5px] border-[#171717] shadow-[3.5px_3.5px_0px_#171717] flex items-center justify-center gap-2 active:translate-x-0.5 active:translate-y-0.5 active:shadow-[1px_1px_0px_#171717] transition-all">
+<span>Muat 8 Panduan Lainnya</span>
+<span class="material-symbols-outlined text-[20px]">expand_circle_down</span>
+</button>
+<!-- Pagination & Total Counter Pill -->
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container text-on-surface-variant rounded-full border border-[#171717]/30 text-body-sm font-body-sm">
+<span class="w-2 h-2 rounded-full bg-primary-container border border-[#171717]"></span>
+<span>Menampilkan 4 dari 64 panduan</span>
+</div>
+</section>
+</div>
+<script>
+  function toggleBookmark(btn) {
+    const icon = btn.querySelector('.material-symbols-outlined');
+    const isSaved = icon.textContent.trim() === 'bookmark';
+    if (isSaved) {
+      icon.textContent = 'bookmark_border';
+      icon.style.fontVariationSettings = "'FILL' 0";
+      btn.classList.remove('bg-primary-container');
+      btn.classList.add('bg-surface-container-lowest');
+    } else {
+      icon.textContent = 'bookmark';
+      icon.style.fontVariationSettings = "'FILL' 1";
+      btn.classList.add('bg-primary-container');
+      btn.classList.remove('bg-surface-container-lowest');
+    }
+  }
+</script></main></body></html>

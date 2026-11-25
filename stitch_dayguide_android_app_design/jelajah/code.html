@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#fcf9f8;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-container": "#ffd84d", "on-error": "#ffffff", "tertiary-fixed-dim": "#ffb4a5", "on-primary-fixed-variant": "#564500", "on-secondary-fixed-variant": "#004b72", "on-primary-container": "#735e00", "surface-variant": "#e5e2e1", "secondary": "#166392", "secondary-container": "#8bcafe", "outline": "#7e7662", "primary": "#725c00", "on-secondary-container": "#005581", "secondary-fixed-dim": "#90cdff", "inverse-primary": "#e9c339", "surface-container-highest": "#e5e2e1", "surface-container-high": "#eae7e7", "on-error-container": "#93000a", "on-surface-variant": "#4d4634", "on-tertiary-fixed": "#3e0500", "outline-variant": "#d0c6ae", "secondary-fixed": "#cbe6ff", "surface-dim": "#dcd9d9", "on-primary-fixed": "#231b00", "on-tertiary": "#ffffff", "on-secondary-fixed": "#001e31", "primary-fixed-dim": "#e9c339", "on-surface": "#1c1b1b", "on-background": "#1c1b1b", "tertiary-fixed": "#ffdad3", "on-secondary": "#ffffff", "error": "#ba1a1a", "tertiary-container": "#ffd1c8", "surface-container-low": "#f6f3f2", "on-tertiary-container": "#a63e29", "tertiary": "#a43c28", "surface": "#fcf9f8", "surface-container-lowest": "#ffffff", "on-primary": "#ffffff", "inverse-on-surface": "#f3f0ef", "surface-tint": "#725c00", "surface-container": "#f0eded", "primary-fixed": "#ffe07e", "surface-bright": "#fcf9f8", "inverse-surface": "#313030", "background": "#fcf9f8", "on-tertiary-fixed-variant": "#842513", "error-container": "#ffdad6" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "1rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "gutter-sm": "0.75rem", "margin-tablet": "1.5rem", "gutter": "1rem", "space-xl": "2rem", "margin": "1rem", "space-lg": "1.5rem" }, "fontFamily": { "label-md": ["Space Grotesk"], "headline-sm": ["Space Grotesk"], "label-lg": ["Space Grotesk"], "body-sm": ["Inter"], "headline-xl": ["Space Grotesk"], "body-lg": ["Inter"], "headline-lg": ["Space Grotesk"], "body-md": ["Inter"], "headline-lg-mobile": ["Space Grotesk"], "label-sm": ["Space Grotesk"], "headline-md": ["Space Grotesk"], "headline-xl-mobile": ["Space Grotesk"] }, "fontSize": { "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "700" }], "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-lg": ["15px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "500" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-lg-mobile": ["24px", { "lineHeight": "30px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-xl-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center justify-between px-space-md h-6 text-on-surface text-label-sm font-label-sm select-none"><span class="tracking-tight font-bold">09:41</span><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[15px]">wifi</span><span class="material-symbols-outlined text-[15px]">signal_cellular_4_bar</span><span class="material-symbols-outlined text-[15px]">battery_charging_full</span></div></div><div class="h-14 px-space-md flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="DAYGUIDE App Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/ALJJyrC0v238Bvh5B9-U1T4bw7ZV1j71QlPF1EHtmPOWTzVW1eq6CwOh1fXmNE3fMnAum0cV1B93UqA2rrllJZyWe0wBWyKBdjDX024xuw0tgPa9hGK7fgzB2DsvGTApIVdPqEaL-rlUt_HU11uUZd91f7kT32xLT-ZhPdGrWw4Q33FmXhgHxmKFgSMuWqUDPlSWTx-yQK2dLgmOS2PBRcA2olaxdps_s3XNokQBJUNcHaBo"/><div class="flex flex-col min-w-0"><span class="font-label-sm text-label-sm text-primary tracking-wider uppercase">DAYGUIDE</span><h1 class="font-headline-sm text-headline-sm text-on-surface truncate">Jelajah</h1></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><button aria-label="Pemberitahuan" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface transition-colors active:bg-surface-variant"><span class="material-symbols-outlined text-[22px]">notifications</span></button><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIxHDkKgPcTB3GyRzCjWZ_SYFLjkriFyDRgmluJZ33erXy78qejs08Qh1Ozi_Sjqc7TFtN-_3pU1WwqUmZXHM_lu91SWjW3lmQzoFOhRHBFzm8QmbbK4hWWSVBFwW7jhntz_B0jBCjnSFx802UpKEJED5uQUy_Mg_uZ1jmlZP1xp7L3baZzX2aTVsYIV7hw73rANkIzoQJvyU3DfxDlE1VSZgGVONwTJpAkia-p_c"/></div></div></header><main class="flex flex-col relative w-full pt-20 pb-24 px-space-md bg-surface flex-grow"><div class="flex flex-col w-full gap-space-md">
+<!-- Section 1: Header Context -->
+<section class="flex flex-col gap-space-xs pt-1">
+<div class="inline-flex items-center gap-space-xs w-fit px-3 py-1 bg-primary-container text-on-surface rounded-full shadow-[2px_2px_0px_#171717] border-[2px] border-[#171717]">
+<span class="material-symbols-outlined text-[16px]">folder_open</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Direktori Topik</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight mt-1">
+      Jelajah Kategori
+    </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+      Temukan ratusan panduan praktis berdasarkan topik favoritmu
+    </p>
+</section>
+<!-- Section 2: Interactive Search & Neobrutalist Chips -->
+<section class="flex flex-col gap-space-sm">
+<div class="relative w-full">
+<input class="w-full h-12 pl-11 pr-4 bg-surface-container-lowest text-on-surface placeholder:text-on-surface-variant/70 rounded-xl border-[2.5px] border-[#171717] shadow-[3px_3px_0px_#171717] focus:outline-none focus:shadow-[4px_4px_0px_#171717] transition-all font-body-md text-body-md" id="search-input" placeholder="Cari kategori atau topik..." type="search"/>
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-on-surface text-[22px] pointer-events-none">
+        search
+      </span>
+</div>
+<!-- Filter Chips Carousel -->
+<div class="flex items-center gap-space-xs overflow-x-auto py-1.5 -mx-space-md px-space-md no-scrollbar" id="chip-container">
+<button class="filter-chip active-chip flex-shrink-0 px-4 py-1.5 rounded-full border-[2px] border-[#171717] bg-[#171717] text-surface font-label-md text-label-md shadow-[2px_2px_0px_#ffd84d] transition-transform active:translate-x-0.5 active:translate-y-0.5" onclick="setActiveChip(this, 'all')">
+        Semua
+      </button>
+<button class="filter-chip flex-shrink-0 px-4 py-1.5 rounded-full border-[2px] border-[#171717] bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-[2px_2px_0px_#171717] transition-transform active:translate-x-0.5 active:translate-y-0.5" onclick="setActiveChip(this, 'populer')">
+        Populer 🔥
+      </button>
+<button class="filter-chip flex-shrink-0 px-4 py-1.5 rounded-full border-[2px] border-[#171717] bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-[2px_2px_0px_#171717] transition-transform active:translate-x-0.5 active:translate-y-0.5" onclick="setActiveChip(this, 'baru')">
+        Baru ✨
+      </button>
+<button class="filter-chip flex-shrink-0 px-4 py-1.5 rounded-full border-[2px] border-[#171717] bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-[2px_2px_0px_#171717] transition-transform active:translate-x-0.5 active:translate-y-0.5" onclick="setActiveChip(this, 'editor')">
+        Pilihan Editor 🎯
+      </button>
+<button class="filter-chip flex-shrink-0 px-4 py-1.5 rounded-full border-[2px] border-[#171717] bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-[2px_2px_0px_#171717] transition-transform active:translate-x-0.5 active:translate-y-0.5" onclick="setActiveChip(this, 'sering')">
+        Tersering Dicari
+      </button>
+</div>
+</section>
+<!-- Section 3: Neobrutalism Category Grid (2 Columns) -->
+<section class="grid grid-cols-2 gap-space-sm pt-1" id="category-grid">
+<!-- Card 1: Kehidupan Sehari-hari (#6EE7B7 Mint) -->
+<article class="group relative flex flex-col justify-between p-3.5 rounded-[14px] bg-[#6EE7B7] text-[#171717] border-[2.5px] border-[#171717] shadow-[3px_3px_0px_#171717] cursor-pointer transition-all active:translate-x-0.5 active:translate-y-0.5 active:shadow-[1px_1px_0px_#171717] overflow-hidden" data-category="kehidupan">
+<div class="flex flex-col">
+<div class="flex items-center justify-between gap-1 mb-2">
+<div class="w-10 h-10 rounded-xl bg-surface-container-lowest border-[2px] border-[#171717] flex items-center justify-center text-xl shadow-[2px_2px_0px_#171717]">
+            ☕
+          </div>
+<span class="inline-block px-2 py-0.5 bg-surface-container-lowest text-[#171717] font-label-sm text-label-sm rounded-full border-[1.5px] border-[#171717]">
+            64 Panduan
+          </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm tracking-tight leading-snug line-clamp-2">
+          Kehidupan Sehari-hari
+        </h3>
+<p class="font-body-sm text-body-sm text-[#171717]/85 mt-1 line-clamp-2">
+          Tips praktis rutinitas harian
+        </p>
+</div>
+<div class="flex items-center justify-between pt-3 mt-1 border-t-[1.5px] border-[#171717]/20">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-[#171717]/80">Eksplor</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</article>
+<!-- Card 2: Teknologi & Gadget (#8CCBFF Sky Blue) -->
+<article class="group relative flex flex-col justify-between p-3.5 rounded-[14px] bg-[#8CCBFF] text-[#171717] border-[2.5px] border-[#171717] shadow-[3px_3px_0px_#171717] cursor-pointer transition-all active:translate-x-0.5 active:translate-y-0.5 active:shadow-[1px_1px_0px_#171717] overflow-hidden" data-category="teknologi">
+<div class="flex flex-col">
+<div class="flex items-center justify-between gap-1 mb-2">
+<div class="w-10 h-10 rounded-xl bg-surface-container-lowest border-[2px] border-[#171717] flex items-center justify-center text-xl shadow-[2px_2px_0px_#171717]">
+            💻
+          </div>
+<span class="inline-block px-2 py-0.5 bg-surface-container-lowest text-[#171717] font-label-sm text-label-sm rounded-full border-[1.5px] border-[#171717]">
+            52 Panduan
+          </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm tracking-tight leading-snug line-clamp-2">
+          Teknologi &amp; Gadget
+        </h3>
+<p class="font-body-sm text-body-sm text-[#171717]/85 mt-1 line-clamp-2">
+          Software, ponsel, &amp; komputer
+        </p>
+</div>
+<div class="flex items-center justify-between pt-3 mt-1 border-t-[1.5px] border-[#171717]/20">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-[#171717]/80">Eksplor</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</article>
+<!-- Card 3: Keuangan Pribadi (#FFD84D Bright Yellow) -->
+<article class="group relative flex flex-col justify-between p-3.5 rounded-[14px] bg-[#FFD84D] text-[#171717] border-[2.5px] border-[#171717] shadow-[3px_3px_0px_#171717] cursor-pointer transition-all active:translate-x-0.5 active:translate-y-0.5 active:shadow-[1px_1px_0px_#171717] overflow-hidden" data-category="keuangan">
+<div class="flex flex-col">
+<div class="flex items-center justify-between gap-1 mb-2">
+<div class="w-10 h-10 rounded-xl bg-surface-container-lowest border-[2px] border-[#171717] flex items-center justify-center text-xl shadow-[2px_2px_0px_#171717]">
+            💰
+          </div>
+<span class="inline-block px-2 py-0.5 bg-surface-container-lowest text-[#171717] font-label-sm text-label-sm rounded-full border-[1.5px] border-[#171717]">
+            39 Panduan
+          </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm tracking-tight leading-snug line-clamp-2">
+          Keuangan Pribadi
+        </h3>
+<p class="font-body-sm text-body-sm text-[#171717]/85 mt-1 line-clamp-2">
+          Budgeting, hemat &amp; investasi
+        </p>
+</div>
+<div class="flex items-center justify-between pt-3 mt-1 border-t-[1.5px] border-[#171717]/20">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-[#171717]/80">Eksplor</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</article>
+<!-- Card 4: Kesehatan & Kebugaran (#FF8066 Coral) -->
+<article class="group relative flex flex-col justify-between p-3.5 rounded-[14px] bg-[#FF8066] text-[#171717] border-[2.5px] border-[#171717] shadow-[3px_3px_0px_#171717] cursor-pointer transition-all active:translate-x-0.5 active:translate-y-0.5 active:shadow-[1px_1px_0px_#171717] overflow-hidden" data-category="kesehatan">
+<div class="flex flex-col">
+<div class="flex items-center justify-between gap-1 mb-2">
+<div class="w-10 h-10 rounded-xl bg-surface-container-lowest border-[2px] border-[#171717] flex items-center justify-center text-xl shadow-[2px_2px_0px_#171717]">
+            🥗
+          </div>
+<span class="inline-block px-2 py-0.5 bg-surface-container-lowest text-[#171717] font-label-sm text-label-sm rounded-full border-[1.5px] border-[#171717]">
+            45 Panduan
+          </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm tracking-tight leading-snug line-clamp-2">
+          Kesehatan &amp; Kebugaran
+        </h3>
+<p class="font-body-sm text-body-sm text-[#171717]/85 mt-1 line-clamp-2">
+          Pola makan, tidur, &amp; olahraga
+        </p>
+</div>
+<div class="flex items-center justify-between pt-3 mt-1 border-t-[1.5px] border-[#171717]/20">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-[#171717]/80">Eksplor</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</article>
+<!-- Card 5: Rumah & Hunian (#C4B5FD Soft Lavender) -->
+<article class="group relative flex flex-col justify-between p-3.5 rounded-[14px] bg-[#C4B5FD] text-[#171717] border-[2.5px] border-[#171717] shadow-[3px_3px_0px_#171717] cursor-pointer transition-all active:translate-x-0.5 active:translate-y-0.5 active:shadow-[1px_1px_0px_#171717] overflow-hidden" data-category="rumah">
+<div class="flex flex-col">
+<div class="flex items-center justify-between gap-1 mb-2">
+<div class="w-10 h-10 rounded-xl bg-surface-container-lowest border-[2px] border-[#171717] flex items-center justify-center text-xl shadow-[2px_2px_0px_#171717]">
+            🏡
+          </div>
+<span class="inline-block px-2 py-0.5 bg-surface-container-lowest text-[#171717] font-label-sm text-label-sm rounded-full border-[1.5px] border-[#171717]">
+            31 Panduan
+          </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm tracking-tight leading-snug line-clamp-2">
+          Rumah &amp; Hunian
+        </h3>
+<p class="font-body-sm text-body-sm text-[#171717]/85 mt-1 line-clamp-2">
+          Perbaikan, dekorasi, &amp; kebersihan
+        </p>
+</div>
+<div class="flex items-center justify-between pt-3 mt-1 border-t-[1.5px] border-[#171717]/20">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-[#171717]/80">Eksplor</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</article>
+<!-- Card 6: Lingkungan Hidup (#A7F3D0 Pale Green) -->
+<article class="group relative flex flex-col justify-between p-3.5 rounded-[14px] bg-[#A7F3D0] text-[#171717] border-[2.5px] border-[#171717] shadow-[3px_3px_0px_#171717] cursor-pointer transition-all active:translate-x-0.5 active:translate-y-0.5 active:shadow-[1px_1px_0px_#171717] overflow-hidden" data-category="lingkungan">
+<div class="flex flex-col">
+<div class="flex items-center justify-between gap-1 mb-2">
+<div class="w-10 h-10 rounded-xl bg-surface-container-lowest border-[2px] border-[#171717] flex items-center justify-center text-xl shadow-[2px_2px_0px_#171717]">
+            🌱
+          </div>
+<span class="inline-block px-2 py-0.5 bg-surface-container-lowest text-[#171717] font-label-sm text-label-sm rounded-full border-[1.5px] border-[#171717]">
+            28 Panduan
+          </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm tracking-tight leading-snug line-clamp-2">
+          Lingkungan Hidup
+        </h3>
+<p class="font-body-sm text-body-sm text-[#171717]/85 mt-1 line-clamp-2">
+          Zero waste &amp; daur ulang
+        </p>
+</div>
+<div class="flex items-center justify-between pt-3 mt-1 border-t-[1.5px] border-[#171717]/20">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-[#171717]/80">Eksplor</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</article>
+<!-- Card 7: Pendidikan & Karir (#FDE047 Soft Yellow) -->
+<article class="group relative flex flex-col justify-between p-3.5 rounded-[14px] bg-[#FDE047] text-[#171717] border-[2.5px] border-[#171717] shadow-[3px_3px_0px_#171717] cursor-pointer transition-all active:translate-x-0.5 active:translate-y-0.5 active:shadow-[1px_1px_0px_#171717] overflow-hidden" data-category="pendidikan">
+<div class="flex flex-col">
+<div class="flex items-center justify-between gap-1 mb-2">
+<div class="w-10 h-10 rounded-xl bg-surface-container-lowest border-[2px] border-[#171717] flex items-center justify-center text-xl shadow-[2px_2px_0px_#171717]">
+            📚
+          </div>
+<span class="inline-block px-2 py-0.5 bg-surface-container-lowest text-[#171717] font-label-sm text-label-sm rounded-full border-[1.5px] border-[#171717]">
+            41 Panduan
+          </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm tracking-tight leading-snug line-clamp-2">
+          Pendidikan &amp; Karir
+        </h3>
+<p class="font-body-sm text-body-sm text-[#171717]/85 mt-1 line-clamp-2">
+          Belajar teratur &amp; produktivitas
+        </p>
+</div>
+<div class="flex items-center justify-between pt-3 mt-1 border-t-[1.5px] border-[#171717]/20">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-[#171717]/80">Eksplor</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</article>
+<!-- Card 8: Keselamatan & Darurat (#FCA5A5 Soft Red) -->
+<article class="group relative flex flex-col justify-between p-3.5 rounded-[14px] bg-[#FCA5A5] text-[#171717] border-[2.5px] border-[#171717] shadow-[3px_3px_0px_#171717] cursor-pointer transition-all active:translate-x-0.5 active:translate-y-0.5 active:shadow-[1px_1px_0px_#171717] overflow-hidden" data-category="keselamatan">
+<div class="flex flex-col">
+<div class="flex items-center justify-between gap-1 mb-2">
+<div class="w-10 h-10 rounded-xl bg-surface-container-lowest border-[2px] border-[#171717] flex items-center justify-center text-xl shadow-[2px_2px_0px_#171717]">
+            🦺
+          </div>
+<span class="inline-block px-2 py-0.5 bg-surface-container-lowest text-[#171717] font-label-sm text-label-sm rounded-full border-[1.5px] border-[#171717]">
+            19 Panduan
+          </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm tracking-tight leading-snug line-clamp-2">
+          Keselamatan &amp; Darurat
+        </h3>
+<p class="font-body-sm text-body-sm text-[#171717]/85 mt-1 line-clamp-2">
+          P3K &amp; nomor darurat penting
+        </p>
+</div>
+<div class="flex items-center justify-between pt-3 mt-1 border-t-[1.5px] border-[#171717]/20">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-[#171717]/80">Eksplor</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</article>
+</section>
+<!-- Section 4: Banner Pilihan (Interactive Neobrutalist Hero Card) -->
+<section class="mt-2 mb-2">
+<div class="relative w-full rounded-2xl bg-[#ffd84d] border-[2.5px] border-[#171717] shadow-[4px_4px_0px_#171717] p-space-md overflow-hidden">
+<!-- Decorative background icon accents -->
+<div class="absolute -right-4 -bottom-6 select-none opacity-20 pointer-events-none">
+<span class="material-symbols-outlined text-[120px] text-on-surface">psychology_alt</span>
+</div>
+<div class="relative z-10 flex flex-col gap-space-xs">
+<div class="flex items-center gap-1.5 w-fit px-2.5 py-0.5 bg-surface-container-lowest text-on-surface rounded-full border-[1.5px] border-[#171717] shadow-[2px_2px_0px_#171717]">
+<span class="material-symbols-outlined text-[14px] text-tertiary">quiz</span>
+<span class="font-label-sm text-label-sm">Panduan Cerdas</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface tracking-tight mt-1">
+          Bingung mulai dari mana?
+        </h3>
+<p class="font-body-md text-body-md text-on-surface/90 max-w-[85%]">
+          Ikuti kuis 30 detik untuk menemukan paket panduan harian yang dirancang khusus untuk kebutuhanmu.
+        </p>
+<div class="pt-2">
+<button class="inline-flex items-center justify-center gap-space-xs px-5 py-3 rounded-xl bg-surface-container-lowest text-on-surface font-label-md text-label-md border-[2.5px] border-[#171717] shadow-[3px_3px_0px_#171717] hover:bg-surface-container-low active:translate-x-0.5 active:translate-y-0.5 active:shadow-[1px_1px_0px_#171717] transition-all" onclick="triggerQuizAction()" type="button">
+<span>Kuis Rekomendasi Panduan</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Micro Interaction Toast / Sheet Notification container -->
+<div class="fixed bottom-24 left-1/2 -translate-x-1/2 z-40 bg-surface-container-lowest text-on-surface border-[2.5px] border-[#171717] shadow-[4px_4px_0px_#171717] rounded-xl px-4 py-2.5 flex items-center gap-2 transition-all duration-300 opacity-0 pointer-events-none translate-y-4" id="toast-notification">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+<span class="font-label-sm text-label-sm" id="toast-text">Filter aktif</span>
+</div>
+</div>
+<script>
+  function showToast(message) {
+    const toast = document.getElementById('toast-notification');
+    const toastText = document.getElementById('toast-text');
+    if (!toast || !toastText) return;
+
+    toastText.textContent = message;
+    toast.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+    toast.classList.add('opacity-100', 'translate-y-0');
+
+    setTimeout(() => {
+      toast.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+      toast.classList.remove('opacity-100', 'translate-y-0');
+    }, 2200);
+  }
+
+  function setActiveChip(button, filterType) {
+    const allChips = document.querySelectorAll('.filter-chip');
+    allChips.forEach(chip => {
+      chip.classList.remove('bg-[#171717]', 'text-surface', 'shadow-[2px_2px_0px_#ffd84d]');
+      chip.classList.add('bg-surface-container-lowest', 'text-on-surface', 'shadow-[2px_2px_0px_#171717]');
+    });
+
+    button.classList.remove('bg-surface-container-lowest', 'text-on-surface', 'shadow-[2px_2px_0px_#171717]');
+    button.classList.add('bg-[#171717]', 'text-surface', 'shadow-[2px_2px_0px_#ffd84d]');
+
+    const label = button.innerText.trim();
+    showToast(`Filter: ${label}`);
+  }
+
+  function triggerQuizAction() {
+    showToast('Membuka Kuis Rekomendasi...');
+  }
+
+  // Live filter capability for search input
+  const searchInput = document.getElementById('search-input');
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      const query = e.target.value.toLowerCase();
+      const cards = document.querySelectorAll('#category-grid > article');
+      cards.forEach(card => {
+        const title = card.querySelector('h3')?.textContent.toLowerCase() || '';
+        const desc = card.querySelector('p')?.textContent.toLowerCase() || '';
+        if (title.includes(query) || desc.includes(query)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  }
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]" data-active-classes="bg-primary-container text-on-surface font-label-md"><div class="px-space-md py-space-xs"><div class="flex items-center justify-around h-16 w-full max-w-md mx-auto"><a class="flex flex-col items-center justify-center min-w-[70px] h-12 px-space-sm rounded-xl text-on-surface-variant font-label-sm text-label-sm transition-all active:scale-95" data-path="beranda" href="#"><span class="material-symbols-outlined text-[22px]">home</span><span class="mt-0.5">Beranda</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[70px] h-12 px-space-sm rounded-xl transition-all active:scale-95 bg-primary-container text-on-surface font-label-md" data-path="jelajah" href="#"><span class="material-symbols-outlined text-[22px]">explore</span><span class="mt-0.5">Jelajah</span></a><a class="flex flex-col items-center justify-center min-w-[70px] h-12 px-space-sm rounded-xl text-on-surface-variant font-label-sm text-label-sm transition-all active:scale-95" data-path="tersimpan" href="#"><span class="material-symbols-outlined text-[22px]">bookmark</span><span class="mt-0.5">Tersimpan</span></a><a class="flex flex-col items-center justify-center min-w-[70px] h-12 px-space-sm rounded-xl text-on-surface-variant font-label-sm text-label-sm transition-all active:scale-95" data-path="profil" href="#"><span class="material-symbols-outlined text-[22px]">person</span><span class="mt-0.5">Profil</span></a></div></div></nav></body></html>

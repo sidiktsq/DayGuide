@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#fcf9f8;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-container": "#ffd84d", "on-error": "#ffffff", "tertiary-fixed-dim": "#ffb4a5", "on-primary-fixed-variant": "#564500", "on-secondary-fixed-variant": "#004b72", "on-primary-container": "#735e00", "surface-variant": "#e5e2e1", "secondary": "#166392", "secondary-container": "#8bcafe", "outline": "#7e7662", "primary": "#725c00", "on-secondary-container": "#005581", "secondary-fixed-dim": "#90cdff", "inverse-primary": "#e9c339", "surface-container-highest": "#e5e2e1", "surface-container-high": "#eae7e7", "on-error-container": "#93000a", "on-surface-variant": "#4d4634", "on-tertiary-fixed": "#3e0500", "outline-variant": "#d0c6ae", "secondary-fixed": "#cbe6ff", "surface-dim": "#dcd9d9", "on-primary-fixed": "#231b00", "on-tertiary": "#ffffff", "on-secondary-fixed": "#001e31", "primary-fixed-dim": "#e9c339", "on-surface": "#1c1b1b", "on-background": "#1c1b1b", "tertiary-fixed": "#ffdad3", "on-secondary": "#ffffff", "error": "#ba1a1a", "tertiary-container": "#ffd1c8", "surface-container-low": "#f6f3f2", "on-tertiary-container": "#a63e29", "tertiary": "#a43c28", "surface": "#fcf9f8", "surface-container-lowest": "#ffffff", "on-primary": "#ffffff", "inverse-on-surface": "#f3f0ef", "surface-tint": "#725c00", "surface-container": "#f0eded", "primary-fixed": "#ffe07e", "surface-bright": "#fcf9f8", "inverse-surface": "#313030", "background": "#fcf9f8", "on-tertiary-fixed-variant": "#842513", "error-container": "#ffdad6" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "1rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "gutter-sm": "0.75rem", "margin-tablet": "1.5rem", "gutter": "1rem", "space-xl": "2rem", "margin": "1rem", "space-lg": "1.5rem" }, "fontFamily": { "label-md": ["Space Grotesk"], "headline-sm": ["Space Grotesk"], "label-lg": ["Space Grotesk"], "body-sm": ["Inter"], "headline-xl": ["Space Grotesk"], "body-lg": ["Inter"], "headline-lg": ["Space Grotesk"], "body-md": ["Inter"], "headline-lg-mobile": ["Space Grotesk"], "label-sm": ["Space Grotesk"], "headline-md": ["Space Grotesk"], "headline-xl-mobile": ["Space Grotesk"] }, "fontSize": { "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "700" }], "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-lg": ["15px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "500" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-lg-mobile": ["24px", { "lineHeight": "30px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-xl-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }] } } } }</script></head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center justify-between px-space-md h-6 text-on-surface text-label-sm font-label-sm select-none"><span class="tracking-tight font-bold">09:41</span><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[15px]">wifi</span><span class="material-symbols-outlined text-[15px]">signal_cellular_4_bar</span><span class="material-symbols-outlined text-[15px]">battery_charging_full</span></div></div><div class="h-14 px-space-md flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs min-w-0"><button aria-label="Kembali" class="w-11 h-11 -ml-2 flex items-center justify-center rounded-full text-on-surface active:bg-surface-variant transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><img alt="DAYGUIDE App Logo" class="h-7 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/ALJJyrC0v238Bvh5B9-U1T4bw7ZV1j71QlPF1EHtmPOWTzVW1eq6CwOh1fXmNE3fMnAum0cV1B93UqA2rrllJZyWe0wBWyKBdjDX024xuw0tgPa9hGK7fgzB2DsvGTApIVdPqEaL-rlUt_HU11uUZd91f7kT32xLT-ZhPdGrWw4Q33FmXhgHxmKFgSMuWqUDPlSWTx-yQK2dLgmOS2PBRcA2olaxdps_s3XNokQBJUNcHaBo"/><h1 class="font-headline-sm text-headline-sm text-on-surface truncate ml-1">Detail Panduan</h1></div><div class="flex items-center gap-space-xs flex-shrink-0"><button aria-label="Bagikan Panduan" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface active:bg-surface-variant transition-colors"><span class="material-symbols-outlined text-[22px]">share</span></button><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIxHDkKgPcTB3GyRzCjWZ_SYFLjkriFyDRgmluJZ33erXy78qejs08Qh1Ozi_Sjqc7TFtN-_3pU1WwqUmZXHM_lu91SWjW3lmQzoFOhRHBFzm8QmbbK4hWWSVBFwW7jhntz_B0jBCjnSFx802UpKEJED5uQUy_Mg_uZ1jmlZP1xp7L3baZzX2aTVsYIV7hw73rANkIzoQJvyU3DfxDlE1VSZgGVONwTJpAkia-p_c"/></div></div></header><main class="flex flex-col relative w-full pt-20 pb-safe px-space-md bg-surface flex-grow"><div class="flex flex-col w-full pb-10 space-y-5">
+<!-- Top Progress Bar (Reading Indicator) -->
+<div class="w-full bg-surface-container-high rounded-full h-2.5 overflow-hidden">
+<div class="bg-primary-container h-full w-1/4 rounded-full transition-all duration-300" id="read-progress"></div>
+</div>
+<!-- 1. Hero Header & Metadata Card -->
+<section class="bg-surface-container-lowest rounded-xl p-space-md shadow-md flex flex-col gap-3">
+<!-- Category & Bookmark Action -->
+<div class="flex items-center justify-between gap-2">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-container text-on-surface font-label-md text-label-md">
+<span class="text-base leading-none">💰</span> Keuangan Pribadi
+      </span>
+<button aria-label="Simpan Panduan" class="w-10 h-10 rounded-xl bg-surface-container-low flex items-center justify-center text-on-surface active:scale-95 transition-transform" id="btn-bookmark" onclick="toggleBookmark()">
+<span class="material-symbols-outlined text-[22px]" id="bookmark-icon">bookmark_border</span>
+</button>
+</div>
+<!-- Title -->
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface leading-tight tracking-tight">
+      Cara Mengatur Keuangan Bulanan dengan Metode 50/30/20
+    </h2>
+<!-- Author & Verification Badge -->
+<div class="flex items-center gap-2 pt-1">
+<div class="w-6 h-6 rounded-full bg-primary-container flex items-center justify-center text-on-surface font-label-sm text-label-sm">
+        DG
+      </div>
+<div class="flex flex-wrap items-center gap-1.5 text-body-sm font-body-sm text-on-surface-variant min-w-0">
+<span class="font-medium text-on-surface">Tim Finansial DAYGUIDE</span>
+<span>•</span>
+<span class="inline-flex items-center gap-0.5 text-secondary font-medium">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+          Terverifikasi Ahli
+        </span>
+</div>
+</div>
+<!-- Metadata Badges -->
+<div class="flex flex-wrap gap-2 pt-2">
+<div class="flex items-center gap-1.5 bg-surface-container px-2.5 py-1 rounded-lg text-body-sm font-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-primary">schedule</span>
+<span>5 Menit Baca</span>
+</div>
+<div class="flex items-center gap-1.5 bg-surface-container px-2.5 py-1 rounded-lg text-body-sm font-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary">bar_chart</span>
+<span>Tingkat: Pemula</span>
+</div>
+<div class="flex items-center gap-1.5 bg-surface-container px-2.5 py-1 rounded-lg text-body-sm font-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-tertiary">calendar_today</span>
+<span>Maret 2025</span>
+</div>
+</div>
+</section>
+<!-- 2. Chunky Diagram Visual Card -->
+<section class="bg-secondary-container text-on-secondary-container rounded-xl p-space-md shadow-md flex flex-col gap-4">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider opacity-80">Rasio Finansial Ideal</span>
+<h3 class="font-headline-sm text-headline-sm mt-0.5">Proporsi Alokasi Bulanan</h3>
+</div>
+<span class="material-symbols-outlined text-[28px] opacity-75">pie_chart</span>
+</div>
+<!-- Visual Breakdown Bars -->
+<div class="flex h-7 w-full rounded-lg overflow-hidden gap-1 p-0.5 bg-surface/30">
+<div class="bg-primary-container h-full rounded-md flex items-center justify-center font-label-sm text-label-sm text-on-surface" style="width: 50%;">50%</div>
+<div class="bg-surface-container-lowest h-full rounded-md flex items-center justify-center font-label-sm text-label-sm text-on-surface" style="width: 30%;">30%</div>
+<div class="bg-tertiary-container h-full rounded-md flex items-center justify-center font-label-sm text-label-sm text-on-tertiary-container" style="width: 20%;">20%</div>
+</div>
+<!-- Micro Cards Breakdown -->
+<div class="grid grid-cols-3 gap-2 text-left">
+<div class="bg-surface-container-lowest text-on-surface rounded-lg p-2.5 flex flex-col gap-1 shadow-sm">
+<div class="flex items-center gap-1">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+<span class="font-label-md text-label-md">50%</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant leading-snug">Kebutuhan Pokok</p>
+</div>
+<div class="bg-surface-container-lowest text-on-surface rounded-lg p-2.5 flex flex-col gap-1 shadow-sm">
+<div class="flex items-center gap-1">
+<span class="w-2.5 h-2.5 rounded-full bg-surface-container-high"></span>
+<span class="font-label-md text-label-md">30%</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant leading-snug">Keinginan &amp; Hiburan</p>
+</div>
+<div class="bg-surface-container-lowest text-on-surface rounded-lg p-2.5 flex flex-col gap-1 shadow-sm">
+<div class="flex items-center gap-1">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-container"></span>
+<span class="font-label-md text-label-md">20%</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant leading-snug">Tabungan &amp; Investasi</p>
+</div>
+</div>
+</section>
+<!-- 3. Daftar Isi (Table of Contents Collapsible Card) -->
+<section class="bg-surface-container-low rounded-xl p-space-md shadow-sm">
+<button class="w-full flex items-center justify-between text-left font-label-lg text-label-lg text-on-surface" onclick="toggleTOC()">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary">menu_book</span>
+        Daftar Isi Panduan
+      </span>
+<span class="material-symbols-outlined text-[20px] transition-transform duration-200" id="toc-chevron">expand_more</span>
+</button>
+<div class="mt-3 flex flex-col gap-2 pt-2" id="toc-content">
+<a class="flex items-center gap-2 text-body-md font-body-md text-on-surface-variant hover:text-primary transition-colors py-1" href="#step-1">
+<span class="w-5 h-5 rounded-full bg-primary-container text-on-surface font-label-sm text-label-sm flex items-center justify-center">1</span>
+<span>Hitung Total Penghasilan Bersih (Take Home Pay)</span>
+</a>
+<a class="flex items-center gap-2 text-body-md font-body-md text-on-surface-variant hover:text-primary transition-colors py-1" href="#step-2">
+<span class="w-5 h-5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm flex items-center justify-center">2</span>
+<span>Alokasikan 50% untuk Kebutuhan Pokok (Needs)</span>
+</a>
+<a class="flex items-center gap-2 text-body-md font-body-md text-on-surface-variant hover:text-primary transition-colors py-1" href="#step-3">
+<span class="w-5 h-5 rounded-full bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm flex items-center justify-center">3</span>
+<span>Sisihkan 20% untuk Tabungan Terlebih Dulu</span>
+</a>
+<a class="flex items-center gap-2 text-body-md font-body-md text-on-surface-variant hover:text-primary transition-colors py-1" href="#step-4">
+<span class="w-5 h-5 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm flex items-center justify-center">4</span>
+<span>Gunakan 30% untuk Keinginan &amp; Hiburan</span>
+</a>
+</div>
+</section>
+<!-- 4. Step-by-Step Instructions -->
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Langkah Penerapan</h3>
+<span class="text-body-sm font-body-sm text-on-surface-variant">4 Langkah Utama</span>
+</div>
+<!-- Step 1 Card -->
+<article class="bg-surface-container-lowest rounded-xl p-space-md shadow-md flex flex-col gap-3" id="step-1">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center font-headline-sm text-headline-sm text-on-surface shadow-sm">
+          01
+        </div>
+<h4 class="font-label-lg text-label-lg text-on-surface flex-1 leading-snug">
+          Hitung Total Penghasilan Bersih (Take Home Pay)
+        </h4>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        Hitung seluruh pemasukan bulanan setelah dipotong pajak, iuran BPJS Kesehatan/Ketenagakerjaan, serta potongan wajib lainnya.
+      </p>
+<div class="bg-surface-container-low rounded-lg p-3 text-body-sm font-body-sm text-on-surface">
+<span class="font-semibold text-primary">Simulasi Gaji:</span> Jika gaji bulanan bersihmu adalah <strong class="text-on-surface font-semibold">Rp 6.000.000</strong>, angka ini yang akan menjadi basis pembagian formula.
+      </div>
+<!-- Pro Tip Callout -->
+<div class="bg-primary-container/20 rounded-lg p-3 flex items-start gap-2.5 text-on-surface">
+<span class="material-symbols-outlined text-[20px] text-primary flex-shrink-0 mt-0.5">lightbulb</span>
+<p class="text-body-sm font-body-sm">
+<strong class="font-semibold">Tips Praktis:</strong> Jangan masukkan bonus tahunan, insentif lemburan acak, atau THR ke dalam hitungan rutin bulanan.
+        </p>
+</div>
+</article>
+<!-- Step 2 Card -->
+<article class="bg-surface-container-lowest rounded-xl p-space-md shadow-md flex flex-col gap-3" id="step-2">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-secondary-container flex items-center justify-center font-headline-sm text-headline-sm text-on-secondary-container shadow-sm">
+          02
+        </div>
+<h4 class="font-label-lg text-label-lg text-on-surface flex-1 leading-snug">
+          Alokasikan 50% untuk Kebutuhan Pokok (Needs)
+        </h4>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        Maksimal <strong class="text-on-surface font-semibold">Rp 3.000.000</strong> untuk pengeluaran esensial yang mutlak dibutuhkan agar kehidupan harianmu tetap berjalan aman.
+      </p>
+<div class="grid grid-cols-2 gap-2 text-body-sm font-body-sm">
+<div class="bg-surface-container p-2.5 rounded-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">home</span>
+<span>Sewa Kos / Cicilan</span>
+</div>
+<div class="bg-surface-container p-2.5 rounded-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">restaurant</span>
+<span>Belanja Makan Pokok</span>
+</div>
+<div class="bg-surface-container p-2.5 rounded-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">bolt</span>
+<span>Tagihan Listrik &amp; Air</span>
+</div>
+<div class="bg-surface-container p-2.5 rounded-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">commute</span>
+<span>Transportasi Kantor</span>
+</div>
+</div>
+</article>
+<!-- Step 3 Card -->
+<article class="bg-surface-container-lowest rounded-xl p-space-md shadow-md flex flex-col gap-3" id="step-3">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-tertiary-container flex items-center justify-center font-headline-sm text-headline-sm text-on-tertiary-container shadow-sm">
+          03
+        </div>
+<h4 class="font-label-lg text-label-lg text-on-surface flex-1 leading-snug">
+          Sisihkan 20% untuk Tabungan (Pay Yourself First)
+        </h4>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        Tepat saat gajian masuk, langsung alihkan <strong class="text-on-surface font-semibold">Rp 1.200.000</strong> sebelum membelanjakan uang untuk hal-hal konsumtif lain.
+      </p>
+<div class="bg-surface-container-low rounded-lg p-3 flex flex-col gap-2">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Dana Darurat (Bank Digital)</span>
+<span class="font-semibold text-tertiary">Rp 800.000</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Reksadana Pasar Uang</span>
+<span class="font-semibold text-tertiary">Rp 400.000</span>
+</div>
+</div>
+</article>
+<!-- Step 4 Card -->
+<article class="bg-surface-container-lowest rounded-xl p-space-md shadow-md flex flex-col gap-3" id="step-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center font-headline-sm text-headline-sm text-on-surface shadow-sm">
+          04
+        </div>
+<h4 class="font-label-lg text-label-lg text-on-surface flex-1 leading-snug">
+          Gunakan 30% untuk Keinginan &amp; Hiburan (Wants)
+        </h4>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        Sisa dana sebesar <strong class="text-on-surface font-semibold">Rp 1.800.000</strong> dapat dinikmati tanpa rasa bersalah (guilt-free spending) untuk menjaga kesehatan mental dan gaya hidup.
+      </p>
+<div class="bg-surface-container-low rounded-lg p-3 text-body-sm font-body-sm text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary">check_circle</span>
+<span>Kuliner akhir pekan, langganan streaming, hobi, &amp; nongkrong.</span>
+</div>
+</article>
+</div>
+<!-- 5. Sumber Informasi & Referensi -->
+<section class="bg-surface-container-low rounded-xl p-space-md shadow-sm flex flex-col gap-2.5">
+<div class="flex items-center gap-2 font-label-md text-label-md text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-outline">account_balance</span>
+<span>Sumber &amp; Referensi Tepercaya</span>
+</div>
+<div class="flex flex-col gap-1.5 text-body-sm font-body-sm text-secondary">
+<a class="flex items-center justify-between hover:underline py-1" href="#">
+<span>• Panduan Literasi Keuangan — Otoritas Jasa Keuangan (OJK)</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</a>
+<a class="flex items-center justify-between hover:underline py-1" href="#">
+<span>• Prinsip 50/30/20 — Asosiasi Perencana Keuangan Independen</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</a>
+</div>
+</section>
+<!-- 6. Action Bar (Large CTA Button) -->
+<section class="pt-2">
+<button class="w-full bg-primary-container text-on-surface py-3.5 px-6 rounded-xl font-headline-sm text-headline-sm shadow-md active:scale-98 transition-all flex items-center justify-center gap-2" id="btn-complete" onclick="markCompleted()">
+<span class="material-symbols-outlined text-[24px]" id="complete-icon">task_alt</span>
+<span id="complete-text">Tandai Selesai Dibaca ✓</span>
+</button>
+</section>
+<!-- 7. Panduan Terkait (Horizontal Recommendations) -->
+<section class="flex flex-col gap-3 pt-2">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Panduan Terkait</h3>
+<span class="font-label-sm text-label-sm text-primary">Lihat Semua</span>
+</div>
+<div class="grid grid-cols-1 gap-3">
+<!-- Related Item 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-md flex items-center gap-3 active:bg-surface-container-low transition-colors">
+<div class="w-14 h-14 rounded-lg bg-surface-container flex-shrink-0 flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Ilustrasi tabungan celengan emas minimalis modern berkarakter 3D ceria di atas meja kerja rapi palet kuning dan biru lembut" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCux14iurStkZcEBs1p0RVkWvYDjIkYL4gW3PW42Rn6OxAlH3zj6cQxSBboWwm7Ye3r2wOCpvrcbxYNC-GicopiZ0WGgrgFZDpYHorafiwi6vEpTbTFqQWQgYPWqEgotHmbRHWJmvsNd6h0hoAhk316GxCOzMhj9zY9sHkYfxzNC2Rkh1PNWece2DQRiXrD0c1BfuSOqkCVmW2x0H_AnS554JRZXyRhpvVQxl2_bVc"/>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<span class="font-label-sm text-label-sm text-primary uppercase">Dana Siaga</span>
+<h4 class="font-label-lg text-label-lg text-on-surface truncate">Cara Memulai Dana Darurat untuk Pemula</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant">⏱ 4 Menit • Praktis</span>
+</div>
+<span class="material-symbols-outlined text-[20px] text-outline flex-shrink-0">chevron_right</span>
+</div>
+<!-- Related Item 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-md flex items-center gap-3 active:bg-surface-container-low transition-colors">
+<div class="w-14 h-14 rounded-lg bg-surface-container flex-shrink-0 flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Tampilan ponsel pintar dengan grafik pengeluaran keuangan warna-warni cerah di tangan anak muda ceria latar belakang estetik" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwK8HEU1JC878c1SxpVSATiYoP1NWIHEWhDxivun9Rrle1z0Txg0ktP-DTl6e3G-f8n75deV-LCM5m1Ig2Do8ljc_0QiC7GgfwFBkAiT0Wzg5NADGkZksVFbKwp5yzevvA14HQu62wemZuxm0avKS02z1wyU3PzyQTDzirm9KXkqS7KswisxUxVL5qcs_a0Uhbo4teoW5nhZZjwmfn69NhTQ2asX-JNnr93fyIGgo"/>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<span class="font-label-sm text-label-sm text-secondary uppercase">Aplikasi</span>
+<h4 class="font-label-lg text-label-lg text-on-surface truncate">5 Aplikasi Pencatat Pengeluaran Gratis</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant">⏱ 6 Menit • Rekomendasi</span>
+</div>
+<span class="material-symbols-outlined text-[20px] text-outline flex-shrink-0">chevron_right</span>
+</div>
+</div>
+</section>
+</div>
+<script>
+  let isBookmarked = false;
+  let isDone = false;
+  let isTOCOpen = true;
+
+  function toggleBookmark() {
+    isBookmarked = !isBookmarked;
+    const icon = document.getElementById('bookmark-icon');
+    const btn = document.getElementById('btn-bookmark');
+    if (isBookmarked) {
+      icon.innerText = 'bookmark';
+      icon.style.fontVariationSettings = "'FILL' 1";
+      btn.classList.add('bg-primary-container');
+      btn.classList.remove('bg-surface-container-low');
+    } else {
+      icon.innerText = 'bookmark_border';
+      icon.style.fontVariationSettings = "'FILL' 0";
+      btn.classList.remove('bg-primary-container');
+      btn.classList.add('bg-surface-container-low');
+    }
+  }
+
+  function toggleTOC() {
+    isTOCOpen = !isTOCOpen;
+    const content = document.getElementById('toc-content');
+    const chevron = document.getElementById('toc-chevron');
+    if (isTOCOpen) {
+      content.classList.remove('hidden');
+      chevron.style.transform = 'rotate(0deg)';
+    } else {
+      content.classList.add('hidden');
+      chevron.style.transform = 'rotate(-90deg)';
+    }
+  }
+
+  function markCompleted() {
+    isDone = !isDone;
+    const btn = document.getElementById('btn-complete');
+    const text = document.getElementById('complete-text');
+    const icon = document.getElementById('complete-icon');
+    const progressBar = document.getElementById('read-progress');
+
+    if (isDone) {
+      btn.classList.remove('bg-primary-container', 'text-on-surface');
+      btn.classList.add('bg-surface-container-highest', 'text-primary');
+      text.innerText = 'Telah Selesai Dipelajari 🎉';
+      icon.innerText = 'check_circle';
+      icon.style.fontVariationSettings = "'FILL' 1";
+      progressBar.style.width = '100%';
+    } else {
+      btn.classList.add('bg-primary-container', 'text-on-surface');
+      btn.classList.remove('bg-surface-container-highest', 'text-primary');
+      text.innerText = 'Tandai Selesai Dibaca ✓';
+      icon.innerText = 'task_alt';
+      icon.style.fontVariationSettings = "'FILL' 0";
+      progressBar.style.width = '25%';
+    }
+  }
+</script></main></body></html>

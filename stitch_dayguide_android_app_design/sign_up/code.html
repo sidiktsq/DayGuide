@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_blank" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#fcf9f8;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-container": "#ffd84d", "on-error": "#ffffff", "tertiary-fixed-dim": "#ffb4a5", "on-primary-fixed-variant": "#564500", "on-secondary-fixed-variant": "#004b72", "on-primary-container": "#735e00", "surface-variant": "#e5e2e1", "secondary": "#166392", "secondary-container": "#8bcafe", "outline": "#7e7662", "primary": "#725c00", "on-secondary-container": "#005581", "secondary-fixed-dim": "#90cdff", "inverse-primary": "#e9c339", "surface-container-highest": "#e5e2e1", "surface-container-high": "#eae7e7", "on-error-container": "#93000a", "on-surface-variant": "#4d4634", "on-tertiary-fixed": "#3e0500", "outline-variant": "#d0c6ae", "secondary-fixed": "#cbe6ff", "surface-dim": "#dcd9d9", "on-primary-fixed": "#231b00", "on-tertiary": "#ffffff", "on-secondary-fixed": "#001e31", "primary-fixed-dim": "#e9c339", "on-surface": "#1c1b1b", "on-background": "#1c1b1b", "tertiary-fixed": "#ffdad3", "on-secondary": "#ffffff", "error": "#ba1a1a", "tertiary-container": "#ffd1c8", "surface-container-low": "#f6f3f2", "on-tertiary-container": "#a63e29", "tertiary": "#a43c28", "surface": "#fcf9f8", "surface-container-lowest": "#ffffff", "on-primary": "#ffffff", "inverse-on-surface": "#f3f0ef", "surface-tint": "#725c00", "surface-container": "#f0eded", "primary-fixed": "#ffe07e", "surface-bright": "#fcf9f8", "inverse-surface": "#313030", "background": "#fcf9f8", "on-tertiary-fixed-variant": "#842513", "error-container": "#ffdad6" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "1rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "gutter-sm": "0.75rem", "margin-tablet": "1.5rem", "gutter": "1rem", "space-xl": "2rem", "margin": "1rem", "space-lg": "1.5rem" }, "fontFamily": { "label-md": ["Space Grotesk"], "headline-sm": ["Space Grotesk"], "label-lg": ["Space Grotesk"], "body-sm": ["Inter"], "headline-xl": ["Space Grotesk"], "body-lg": ["Inter"], "headline-lg": ["Space Grotesk"], "body-md": ["Inter"], "headline-lg-mobile": ["Space Grotesk"], "label-sm": ["Space Grotesk"], "headline-md": ["Space Grotesk"], "headline-xl-mobile": ["Space Grotesk"] }, "fontSize": { "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "700" }], "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-lg": ["15px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "500" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-lg-mobile": ["24px", { "lineHeight": "30px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-xl-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }] } } } }</script></head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen pt-safe pb-safe"><main class="flex flex-col relative w-full bg-surface flex-grow"><div class="flex flex-col w-full px-margin pb-10">
+<!-- Android Status Bar Minimalist Frame -->
+<div class="flex items-center justify-between py-2 text-on-surface select-none">
+<span class="font-label-md text-label-md tracking-wider">09:41</span>
+<div class="flex items-center space-x-1.5 text-on-surface">
+<span class="material-symbols-outlined text-[16px]">signal_cellular_4_bar</span>
+<span class="material-symbols-outlined text-[16px]">wifi</span>
+<span class="material-symbols-outlined text-[18px]">battery_full</span>
+</div>
+</div>
+<!-- Mini Navigation Header -->
+<div class="flex items-center justify-between pt-2 pb-4">
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-surface-container-lowest text-on-surface transition-transform active:translate-x-0.5 active:translate-y-0.5" style="border: 2.5px solid #171717; box-shadow: 3px 3px 0px #171717;" type="button">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span class="font-label-sm text-label-sm">Kembali</span>
+</button>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container" style="border: 2px solid #171717; box-shadow: 2px 2px 0px #171717;">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wide">v2.4 Ready</span>
+</div>
+</div>
+<!-- Brand & Catchy Badge -->
+<div class="flex items-center gap-2.5 mt-1">
+<div class="w-9 h-9 rounded-xl bg-primary-container flex items-center justify-center text-on-primary-fixed" style="border: 2.5px solid #171717; box-shadow: 2.5px 2.5px 0px #171717;">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">auto_stories</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm uppercase tracking-tight text-on-surface">DAYGUIDE</span>
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm" style="border: 2px solid #171717;">
+        ✨ Gratis Selamanya
+      </span>
+</div>
+</div>
+<!-- Header Titles -->
+<div class="mt-4">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface leading-tight">
+      Buat Akun DAYGUIDE 🚀
+    </h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1.5">
+      Mulai jelajahi ratusan panduan praktis harian dan simpan progres belajarmu.
+    </p>
+</div>
+<!-- Benefit Highlight Card -->
+<div class="mt-4 p-3.5 rounded-xl bg-secondary-fixed text-on-secondary-fixed" style="border: 2.5px solid #171717; box-shadow: 3px 3px 0px #171717;">
+<div class="flex items-center gap-1.5 mb-2">
+<span class="material-symbols-outlined text-[18px]">stars</span>
+<span class="font-label-md text-label-md uppercase">Keuntungan Anggota:</span>
+</div>
+<div class="grid grid-cols-1 gap-1.5 font-label-sm text-label-sm">
+<div class="flex items-center gap-2">
+<span class="w-4 h-4 rounded-full bg-primary-container flex items-center justify-center text-[10px] font-bold text-on-surface" style="border: 1.5px solid #171717;">✓</span>
+<span>Baca offline praktis tanpa makan kuota</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-4 h-4 rounded-full bg-primary-container flex items-center justify-center text-[10px] font-bold text-on-surface" style="border: 1.5px solid #171717;">✓</span>
+<span>Tandai &amp; catat tiap progres checklist</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-4 h-4 rounded-full bg-primary-container flex items-center justify-center text-[10px] font-bold text-on-surface" style="border: 1.5px solid #171717;">✓</span>
+<span>100% bebas interupsi iklan yang mengganggu</span>
+</div>
+</div>
+</div>
+<!-- Form Section -->
+<form class="mt-5 flex flex-col space-y-4" id="signup-form" onsubmit="event.preventDefault();">
+<!-- Input 1: Nama Lengkap -->
+<div class="flex flex-col space-y-1.5">
+<label class="font-label-md text-label-md text-on-surface flex items-center gap-1" for="name">
+<span>Nama Lengkap</span>
+<span class="text-tertiary">*</span>
+</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[20px] pointer-events-none">person</span>
+<input class="w-full pl-10 pr-3 py-3 rounded-xl bg-surface-container-lowest text-on-surface font-body-md text-body-md placeholder:text-outline focus:outline-none transition-all" id="name" placeholder="Budi Santoso" required="" style="border: 2.5px solid #171717; box-shadow: 3px 3px 0px #171717;" type="text"/>
+</div>
+</div>
+<!-- Input 2: Email -->
+<div class="flex flex-col space-y-1.5">
+<label class="font-label-md text-label-md text-on-surface flex items-center gap-1" for="email">
+<span>Alamat Email</span>
+<span class="text-tertiary">*</span>
+</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[20px] pointer-events-none">mail</span>
+<input class="w-full pl-10 pr-3 py-3 rounded-xl bg-surface-container-lowest text-on-surface font-body-md text-body-md placeholder:text-outline focus:outline-none transition-all" id="email" placeholder="nama@email.com" required="" style="border: 2.5px solid #171717; box-shadow: 3px 3px 0px #171717;" type="email"/>
+</div>
+</div>
+<!-- Input 3: Kata Sandi -->
+<div class="flex flex-col space-y-1.5">
+<label class="font-label-md text-label-md text-on-surface flex items-center justify-between" for="password">
+<span class="flex items-center gap-1">
+<span>Kata Sandi</span>
+<span class="text-tertiary">*</span>
+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Min. 8 karakter</span>
+</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[20px] pointer-events-none">lock</span>
+<input class="w-full pl-10 pr-11 py-3 rounded-xl bg-surface-container-lowest text-on-surface font-body-md text-body-md placeholder:text-outline focus:outline-none transition-all" id="password" oninput="checkPasswordStrength(this.value)" placeholder="Minimal 8 karakter unik" required="" style="border: 2.5px solid #171717; box-shadow: 3px 3px 0px #171717;" type="password"/>
+<button class="absolute right-3 text-on-surface flex items-center justify-center p-1 focus:outline-none" onclick="togglePasswordVisibility('password', 'toggle-pwd-icon')" type="button">
+<span class="material-symbols-outlined text-[20px]" id="toggle-pwd-icon">visibility</span>
+</button>
+</div>
+<!-- Password Strength Indicator Pill Bar -->
+<div class="flex items-center gap-1.5 pt-1">
+<div class="flex-1 h-2 rounded-full overflow-hidden bg-surface-variant" style="border: 1.5px solid #171717;">
+<div class="h-full w-full bg-primary-container transition-all" id="bar-1"></div>
+</div>
+<div class="flex-1 h-2 rounded-full overflow-hidden bg-surface-variant" style="border: 1.5px solid #171717;">
+<div class="h-full w-full bg-primary-container transition-all" id="bar-2"></div>
+</div>
+<div class="flex-1 h-2 rounded-full overflow-hidden bg-surface-variant" style="border: 1.5px solid #171717;">
+<div class="h-full w-0 bg-secondary-fixed transition-all" id="bar-3"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface ml-1" id="strength-label">Sedang</span>
+</div>
+</div>
+<!-- Input 4: Konfirmasi Kata Sandi -->
+<div class="flex flex-col space-y-1.5">
+<label class="font-label-md text-label-md text-on-surface flex items-center gap-1" for="password_confirm">
+<span>Ulangi Kata Sandi</span>
+<span class="text-tertiary">*</span>
+</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[20px] pointer-events-none">lock_reset</span>
+<input class="w-full pl-10 pr-11 py-3 rounded-xl bg-surface-container-lowest text-on-surface font-body-md text-body-md placeholder:text-outline focus:outline-none transition-all" id="password_confirm" placeholder="Ketik ulang kata sandi" required="" style="border: 2.5px solid #171717; box-shadow: 3px 3px 0px #171717;" type="password"/>
+<button class="absolute right-3 text-on-surface flex items-center justify-center p-1 focus:outline-none" onclick="togglePasswordVisibility('password_confirm', 'toggle-confirm-icon')" type="button">
+<span class="material-symbols-outlined text-[20px]" id="toggle-confirm-icon">visibility</span>
+</button>
+</div>
+</div>
+<!-- Checkbox Persetujuan -->
+<label class="flex items-start gap-3 pt-1 select-none cursor-pointer">
+<div class="relative flex items-center mt-0.5">
+<input class="peer appearance-none w-5 h-5 rounded bg-surface-container-lowest checked:bg-secondary-fixed cursor-pointer transition-colors" id="terms-checkbox" required="" style="border: 2.5px solid #171717; box-shadow: 2px 2px 0px #171717;" type="checkbox"/>
+<span class="material-symbols-outlined absolute pointer-events-none text-on-surface text-[15px] opacity-0 peer-checked:opacity-100 left-0.5 top-0.5 font-bold">
+          check
+        </span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface leading-tight">
+        Saya menyetujui <span class="font-bold underline">Syarat &amp; Ketentuan</span> serta <span class="font-bold underline">Kebijakan Privasi</span> DAYGUIDE.
+      </span>
+</label>
+<!-- Tombol Aksi Utama -->
+<div class="pt-2">
+<button class="w-full h-[52px] rounded-xl bg-primary-container text-on-surface font-label-lg text-label-lg flex items-center justify-center gap-2 transition-transform active:translate-x-0.5 active:translate-y-0.5" style="border: 2.5px solid #171717; box-shadow: 4px 4px 0px #171717;" type="submit">
+<span>Daftar Akun Baru</span>
+<span class="material-symbols-outlined text-[20px]">rocket_launch</span>
+</button>
+</div>
+</form>
+<!-- Divider Neobrutalist -->
+<div class="relative flex items-center justify-center my-6">
+<div class="w-full h-0.5 bg-on-surface"></div>
+<span class="absolute px-3 bg-surface font-label-sm text-label-sm tracking-wider uppercase text-on-surface-variant">
+      ATAU DAFTAR CEPAT DENGAN
+    </span>
+</div>
+<!-- Social Registration: Google -->
+<button class="w-full py-3 px-4 rounded-xl bg-surface-container-lowest text-on-surface font-label-md text-label-md flex items-center justify-center gap-3 transition-transform active:translate-x-0.5 active:translate-y-0.5" style="border: 2.5px solid #171717; box-shadow: 3px 3px 0px #171717;" type="button">
+<svg class="w-5 h-5" viewbox="0 0 24 24">
+<path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path>
+<path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path>
+<path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"></path>
+<path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"></path>
+</svg>
+<span>Daftar dengan Akun Google</span>
+</button>
+<!-- Login Link -->
+<div class="mt-6 text-center">
+<p class="font-body-md text-body-md text-on-surface">
+      Sudah punya akun DAYGUIDE? 
+      <a class="font-label-md text-label-md text-primary underline decoration-2 ml-1 hover:text-on-surface transition-colors" href="#">
+        Masuk di sini
+      </a>
+</p>
+</div>
+<!-- Security Guarantee Footer -->
+<div class="mt-6 flex flex-col items-center justify-center text-center space-y-1">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm" style="border: 1.5px solid #171717;">
+<span class="material-symbols-outlined text-[15px]">verified_user</span>
+<span>Data dilindungi enkripsi 256-bit • Buatan Indonesia 🇮🇩</span>
+</div>
+</div>
+</div>
+<script>
+  function togglePasswordVisibility(inputId, iconId) {
+    const input = document.getElementById(inputId);
+    const icon = document.getElementById(iconId);
+    if (!input || !icon) return;
+    if (input.type === 'password') {
+      input.type = 'text';
+      icon.textContent = 'visibility_off';
+    } else {
+      input.type = 'password';
+      icon.textContent = 'visibility';
+    }
+  }
+
+  function checkPasswordStrength(val) {
+    const bar1 = document.getElementById('bar-1');
+    const bar2 = document.getElementById('bar-2');
+    const bar3 = document.getElementById('bar-3');
+    const label = document.getElementById('strength-label');
+
+    if (!bar1 || !bar2 || !bar3 || !label) return;
+
+    if (val.length === 0) {
+      bar1.className = 'h-full w-0 transition-all';
+      bar2.className = 'h-full w-0 transition-all';
+      bar3.className = 'h-full w-0 transition-all';
+      label.textContent = 'Kekuatan';
+    } else if (val.length < 6) {
+      bar1.className = 'h-full w-full bg-tertiary transition-all';
+      bar2.className = 'h-full w-0 transition-all';
+      bar3.className = 'h-full w-0 transition-all';
+      label.textContent = 'Lemah';
+    } else if (val.length < 9) {
+      bar1.className = 'h-full w-full bg-primary-container transition-all';
+      bar2.className = 'h-full w-full bg-primary-container transition-all';
+      bar3.className = 'h-full w-0 transition-all';
+      label.textContent = 'Sedang';
+    } else {
+      bar1.className = 'h-full w-full bg-secondary-fixed transition-all';
+      bar2.className = 'h-full w-full bg-secondary-fixed transition-all';
+      bar3.className = 'h-full w-full bg-secondary-fixed transition-all';
+      label.textContent = 'Sangat Kuat!';
+    }
+  }
+</script></main></body></html>

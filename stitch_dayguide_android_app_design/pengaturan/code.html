@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#fcf9f8;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-container": "#ffd84d", "on-error": "#ffffff", "tertiary-fixed-dim": "#ffb4a5", "on-primary-fixed-variant": "#564500", "on-secondary-fixed-variant": "#004b72", "on-primary-container": "#735e00", "surface-variant": "#e5e2e1", "secondary": "#166392", "secondary-container": "#8bcafe", "outline": "#7e7662", "primary": "#725c00", "on-secondary-container": "#005581", "secondary-fixed-dim": "#90cdff", "inverse-primary": "#e9c339", "surface-container-highest": "#e5e2e1", "surface-container-high": "#eae7e7", "on-error-container": "#93000a", "on-surface-variant": "#4d4634", "on-tertiary-fixed": "#3e0500", "outline-variant": "#d0c6ae", "secondary-fixed": "#cbe6ff", "surface-dim": "#dcd9d9", "on-primary-fixed": "#231b00", "on-tertiary": "#ffffff", "on-secondary-fixed": "#001e31", "primary-fixed-dim": "#e9c339", "on-surface": "#1c1b1b", "on-background": "#1c1b1b", "tertiary-fixed": "#ffdad3", "on-secondary": "#ffffff", "error": "#ba1a1a", "tertiary-container": "#ffd1c8", "surface-container-low": "#f6f3f2", "on-tertiary-container": "#a63e29", "tertiary": "#a43c28", "surface": "#fcf9f8", "surface-container-lowest": "#ffffff", "on-primary": "#ffffff", "inverse-on-surface": "#f3f0ef", "surface-tint": "#725c00", "surface-container": "#f0eded", "primary-fixed": "#ffe07e", "surface-bright": "#fcf9f8", "inverse-surface": "#313030", "background": "#fcf9f8", "on-tertiary-fixed-variant": "#842513", "error-container": "#ffdad6" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "1rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "gutter-sm": "0.75rem", "margin-tablet": "1.5rem", "gutter": "1rem", "space-xl": "2rem", "margin": "1rem", "space-lg": "1.5rem" }, "fontFamily": { "label-md": ["Space Grotesk"], "headline-sm": ["Space Grotesk"], "label-lg": ["Space Grotesk"], "body-sm": ["Inter"], "headline-xl": ["Space Grotesk"], "body-lg": ["Inter"], "headline-lg": ["Space Grotesk"], "body-md": ["Inter"], "headline-lg-mobile": ["Space Grotesk"], "label-sm": ["Space Grotesk"], "headline-md": ["Space Grotesk"], "headline-xl-mobile": ["Space Grotesk"] }, "fontSize": { "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "700" }], "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-lg": ["15px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "500" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-lg-mobile": ["24px", { "lineHeight": "30px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-xl-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }] } } } }</script></head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center justify-between px-space-md h-6 text-on-surface text-label-sm font-label-sm select-none"><span class="tracking-tight font-bold">09:41</span><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[15px]">wifi</span><span class="material-symbols-outlined text-[15px]">signal_cellular_4_bar</span><span class="material-symbols-outlined text-[15px]">battery_charging_full</span></div></div><div class="h-14 px-space-md flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs min-w-0"><button aria-label="Kembali" class="w-11 h-11 -ml-2 flex items-center justify-center rounded-full text-on-surface active:bg-surface-variant transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><img alt="DAYGUIDE App Logo" class="h-7 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/ALJJyrC0v238Bvh5B9-U1T4bw7ZV1j71QlPF1EHtmPOWTzVW1eq6CwOh1fXmNE3fMnAum0cV1B93UqA2rrllJZyWe0wBWyKBdjDX024xuw0tgPa9hGK7fgzB2DsvGTApIVdPqEaL-rlUt_HU11uUZd91f7kT32xLT-ZhPdGrWw4Q33FmXhgHxmKFgSMuWqUDPlSWTx-yQK2dLgmOS2PBRcA2olaxdps_s3XNokQBJUNcHaBo"/><h1 class="font-headline-sm text-headline-sm text-on-surface truncate ml-1">Detail Panduan</h1></div><div class="flex items-center gap-space-xs flex-shrink-0"><button aria-label="Bagikan Panduan" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface active:bg-surface-variant transition-colors"><span class="material-symbols-outlined text-[22px]">share</span></button><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIxHDkKgPcTB3GyRzCjWZ_SYFLjkriFyDRgmluJZ33erXy78qejs08Qh1Ozi_Sjqc7TFtN-_3pU1WwqUmZXHM_lu91SWjW3lmQzoFOhRHBFzm8QmbbK4hWWSVBFwW7jhntz_B0jBCjnSFx802UpKEJED5uQUy_Mg_uZ1jmlZP1xp7L3baZzX2aTVsYIV7hw73rANkIzoQJvyU3DfxDlE1VSZgGVONwTJpAkia-p_c"/></div></div></header><main class="flex flex-col relative w-full pt-20 pb-safe px-space-md bg-surface flex-grow"><div class="flex flex-col w-full pb-8 select-none">
+<!-- Navigation Sub-header / Back breadcrumb -->
+<div class="flex items-center gap-space-xs mb-space-md">
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-surface-container-lowest text-on-surface rounded-xl shadow-md active:translate-x-0.5 active:translate-y-0.5 transition-all" onclick="history.back()">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span class="font-label-md text-label-md">Profil</span>
+</button>
+</div>
+<!-- Screen Heading -->
+<div class="mb-space-lg">
+<div class="inline-flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-primary text-[28px]" style="font-variation-settings: 'FILL' 1;">tune</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight">Pengaturan</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Sesuaikan preferensi aplikasi DAYGUIDE sesuai gayamu.</p>
+</div>
+<!-- SECTION 1: Tampilan & Tema -->
+<section class="mb-space-lg flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface tracking-wider uppercase flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">palette</span>
+        Tampilan &amp; Tema
+      </span>
+<span class="text-label-sm font-label-sm bg-primary-container text-on-primary-container px-2 py-0.5 rounded-full shadow-sm">Kustom</span>
+</div>
+<!-- Theme Segmented Control -->
+<div class="grid grid-cols-3 gap-2.5">
+<!-- Terang (Aktif) -->
+<button aria-pressed="true" class="relative flex flex-col items-center justify-center p-3 rounded-xl bg-primary-container text-on-surface shadow-md translate-x-0.5 translate-y-0.5 transition-all" type="button">
+<div class="absolute -top-1.5 -right-1.5 w-5 h-5 rounded-full bg-surface-container-lowest text-on-surface flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[14px] text-primary font-bold">check</span>
+</div>
+<span class="text-[24px] mb-1">☀️</span>
+<span class="font-label-sm text-label-sm font-bold text-center leading-tight">Terang</span>
+<span class="text-[10px] font-bold text-primary tracking-tighter uppercase mt-0.5">(Aktif)</span>
+</button>
+<!-- Gelap (Disabled / Soon) -->
+<div class="relative flex flex-col items-center justify-center p-3 rounded-xl bg-surface-container text-on-surface-variant opacity-80 cursor-not-allowed shadow-sm">
+<span class="text-[24px] mb-1 grayscale opacity-60">🌙</span>
+<span class="font-label-sm text-label-sm font-bold text-center leading-tight text-on-surface-variant">Gelap</span>
+<span class="text-[9px] font-bold bg-surface-variant text-on-surface-variant px-1 rounded mt-0.5 tracking-tight">Segera</span>
+</div>
+<!-- Sistem -->
+<button aria-pressed="false" class="relative flex flex-col items-center justify-center p-3 rounded-xl bg-surface-container-lowest text-on-surface shadow-sm active:translate-x-0.5 active:translate-y-0.5 transition-all" type="button">
+<span class="text-[24px] mb-1">⚙️</span>
+<span class="font-label-sm text-label-sm font-bold text-center leading-tight">Sistem</span>
+<span class="text-[10px] text-on-surface-variant tracking-tight mt-0.5">Auto</span>
+</button>
+</div>
+<!-- Font Size Selector -->
+<div class="flex items-center justify-between p-3.5 bg-surface-container-lowest rounded-xl shadow-md mt-1">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[20px]">format_size</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface">Ukuran Teks</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Sedang (Standar DAYGUIDE)</p>
+</div>
+</div>
+<div class="flex items-center gap-1.5 bg-surface-container-low p-1 rounded-xl shadow-inner">
+<button aria-label="Kecilkan teks" class="w-8 h-8 rounded-lg bg-surface-container-lowest text-on-surface flex items-center justify-center shadow-sm active:translate-y-0.5 font-label-md text-label-md" type="button">A-</button>
+<span class="w-7 text-center font-label-md text-label-md text-primary">100%</span>
+<button aria-label="Besarkan teks" class="w-8 h-8 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center shadow-sm active:translate-y-0.5 font-label-md text-label-md" type="button">A+</button>
+</div>
+</div>
+</section>
+<!-- SECTION 2: Notifikasi & Pengingat -->
+<section class="mb-space-lg flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface tracking-wider uppercase flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">notifications_active</span>
+        Notifikasi &amp; Pengingat
+      </span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">3 Opsi</span>
+</div>
+<div class="flex flex-col gap-2.5">
+<!-- Toggle 1: Tips Harian Pagi -->
+<div class="flex items-center justify-between p-3.5 bg-surface-container-lowest rounded-xl shadow-md">
+<div class="flex items-start gap-3 min-w-0 pr-2">
+<div class="w-9 h-9 rounded-lg bg-primary-fixed flex items-center justify-center text-on-primary-fixed flex-shrink-0 mt-0.5 shadow-sm">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">wb_sunny</span>
+</div>
+<div class="min-w-0">
+<h4 class="font-label-md text-label-md text-on-surface truncate">Tips Harian Setiap Pagi</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 07:00 WIB (Sarapan ilmu)
+            </p>
+</div>
+</div>
+<!-- Neobrutalist Toggle Active -->
+<button aria-checked="true" class="w-13 h-7 px-0.5 bg-primary-container rounded-full flex items-center justify-end shadow-inner active:scale-95 transition-all flex-shrink-0" role="switch" type="button">
+<div class="w-6 h-6 rounded-full bg-on-surface text-surface flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[14px] font-bold">check</span>
+</div>
+</button>
+</div>
+<!-- Toggle 2: Rekomendasi Mingguan -->
+<div class="flex items-center justify-between p-3.5 bg-surface-container-lowest rounded-xl shadow-md">
+<div class="flex items-start gap-3 min-w-0 pr-2">
+<div class="w-9 h-9 rounded-lg bg-secondary-container flex items-center justify-center text-on-secondary-container flex-shrink-0 mt-0.5 shadow-sm">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+<div class="min-w-0">
+<h4 class="font-label-md text-label-md text-on-surface truncate">Rekomendasi Panduan Baru</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Kompilasi praktis setiap Senin</p>
+</div>
+</div>
+<!-- Neobrutalist Toggle Active -->
+<button aria-checked="true" class="w-13 h-7 px-0.5 bg-primary-container rounded-full flex items-center justify-end shadow-inner active:scale-95 transition-all flex-shrink-0" role="switch" type="button">
+<div class="w-6 h-6 rounded-full bg-on-surface text-surface flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[14px] font-bold">check</span>
+</div>
+</button>
+</div>
+<!-- Toggle 3: Pengingat Lanjut Membaca -->
+<div class="flex items-center justify-between p-3.5 bg-surface-container-lowest rounded-xl shadow-md">
+<div class="flex items-start gap-3 min-w-0 pr-2">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface-variant flex-shrink-0 mt-0.5 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">bookmark_heart</span>
+</div>
+<div class="min-w-0">
+<h4 class="font-label-md text-label-md text-on-surface truncate">Pengingat Lanjut Membaca</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Sentil jika ada panduan tertunda</p>
+</div>
+</div>
+<!-- Neobrutalist Toggle Inactive -->
+<button aria-checked="false" class="w-13 h-7 px-0.5 bg-surface-container-high rounded-full flex items-center justify-start shadow-inner active:scale-95 transition-all flex-shrink-0" role="switch" type="button">
+<div class="w-6 h-6 rounded-full bg-surface-container-lowest text-on-surface-variant flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[14px]">close</span>
+</div>
+</button>
+</div>
+</div>
+</section>
+<!-- SECTION 3: Unduhan & Offline -->
+<section class="mb-space-lg flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface tracking-wider uppercase flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">cloud_sync</span>
+        Unduhan &amp; Penyimpanan
+      </span>
+<span class="text-label-sm font-label-sm bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded-full shadow-sm">Offline Siap</span>
+</div>
+<div class="flex flex-col gap-2.5">
+<!-- Auto Offline Save -->
+<div class="flex items-center justify-between p-3.5 bg-surface-container-lowest rounded-xl shadow-md">
+<div class="flex items-start gap-3 min-w-0 pr-2">
+<div class="w-9 h-9 rounded-lg bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed flex-shrink-0 mt-0.5 shadow-sm">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">downloading</span>
+</div>
+<div class="min-w-0">
+<h4 class="font-label-md text-label-md text-on-surface truncate">Simpan Panduan Otomatis</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Bisa dibuka saat kuota sekarat</p>
+</div>
+</div>
+<!-- Neobrutalist Toggle Active -->
+<button aria-checked="true" class="w-13 h-7 px-0.5 bg-primary-container rounded-full flex items-center justify-end shadow-inner active:scale-95 transition-all flex-shrink-0" role="switch" type="button">
+<div class="w-6 h-6 rounded-full bg-on-surface text-surface flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[14px] font-bold">check</span>
+</div>
+</button>
+</div>
+<!-- Cache Management Card -->
+<div class="p-3.5 bg-surface-container-lowest rounded-xl shadow-md flex items-center justify-between gap-3">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-9 h-9 rounded-lg bg-tertiary-container flex items-center justify-center text-on-tertiary-container flex-shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">cleaning_services</span>
+</div>
+<div class="min-w-0">
+<h4 class="font-label-md text-label-md text-on-surface truncate">Hapus Cache Penyimpanan</h4>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="text-label-sm font-label-sm font-bold text-tertiary bg-tertiary-container/60 px-1.5 py-0.2 rounded">42.5 MB</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">File sementara &amp; gambar</span>
+</div>
+</div>
+</div>
+<!-- Clean Button -->
+<button class="px-3.5 py-2 bg-tertiary-container text-on-tertiary-container rounded-xl font-label-md text-label-md shadow-md active:translate-x-0.5 active:translate-y-0.5 flex-shrink-0 flex items-center gap-1 transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">delete_sweep</span>
+          Bersihkan
+        </button>
+</div>
+</div>
+</section>
+<!-- SECTION 4: Informasi & Legal -->
+<section class="mb-space-lg flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface tracking-wider uppercase flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">policy</span>
+        Informasi &amp; Legal
+      </span>
+</div>
+<div class="flex flex-col gap-2">
+<!-- Privacy Policy -->
+<a class="flex items-center justify-between p-3.5 bg-surface-container-lowest rounded-xl shadow-md active:translate-x-0.5 active:translate-y-0.5 transition-all group" href="#privacy">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface group-hover:text-primary transition-colors">Kebijakan Privasi</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Bagaimana kami mengamankan datamu</p>
+</div>
+</div>
+<div class="w-7 h-7 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface shadow-sm group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</a>
+<!-- Terms & Conditions -->
+<a class="flex items-center justify-between p-3.5 bg-surface-container-lowest rounded-xl shadow-md active:translate-x-0.5 active:translate-y-0.5 transition-all group" href="#terms">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[18px]">description</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface group-hover:text-primary transition-colors">Syarat &amp; Ketentuan Penggunaan</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Hak dan kewajiban pengguna DAYGUIDE</p>
+</div>
+</div>
+<div class="w-7 h-7 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface shadow-sm group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</a>
+<!-- Play Store Rating -->
+<a class="flex items-center justify-between p-3.5 bg-primary-fixed rounded-xl shadow-md active:translate-x-0.5 active:translate-y-0.5 transition-all group" href="#rate">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container-lowest text-on-surface flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-primary-fixed">Beri Nilai di Google Play Store</h4>
+<p class="font-body-sm text-body-sm text-on-primary-fixed-variant">Dukung tim kami dengan 5 bintang ⭐</p>
+</div>
+</div>
+<div class="w-7 h-7 rounded-full bg-surface-container-lowest text-on-surface flex items-center justify-center shadow-sm group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</div>
+</a>
+</div>
+</section>
+<!-- SECTION 5: App Version & Attribution Footer -->
+<footer class="mt-2 p-4 bg-surface-container-low rounded-xl text-center flex flex-col items-center justify-center shadow-inner">
+<div class="w-10 h-10 rounded-xl bg-surface-container-lowest p-1 shadow-md mb-2 flex items-center justify-center">
+<img alt="DAYGUIDE Mini Icon" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrC0v238Bvh5B9-U1T4bw7ZV1j71QlPF1EHtmPOWTzVW1eq6CwOh1fXmNE3fMnAum0cV1B93UqA2rrllJZyWe0wBWyKBdjDX024xuw0tgPa9hGK7fgzB2DsvGTApIVdPqEaL-rlUt_HU11uUZd91f7kT32xLT-ZhPdGrWw4Q33FmXhgHxmKFgSMuWqUDPlSWTx-yQK2dLgmOS2PBRcA2olaxdps_s3XNokQBJUNcHaBo"/>
+</div>
+<span class="font-label-md text-label-md text-on-surface tracking-wide">DAYGUIDE v1.0.0</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium mt-0.5">Build 2025.03 • Prod Release</span>
+<div class="w-12 h-0.5 bg-outline-variant my-2.5 rounded-full"></div>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center justify-center gap-1">
+      Dibuat dengan <span class="text-tertiary">❤️</span> untuk Masyarakat Indonesia
+    </p>
+<div class="mt-2 inline-flex items-center gap-1.5 px-2.5 py-1 bg-surface-container-highest rounded-full shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="text-[11px] font-label-sm font-bold text-on-surface-variant">Siap implementasi Flutter</span>
+</div>
+</footer>
+</div></main></body></html>

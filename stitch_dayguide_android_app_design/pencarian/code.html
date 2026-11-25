@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#fcf9f8;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-container": "#ffd84d", "on-error": "#ffffff", "tertiary-fixed-dim": "#ffb4a5", "on-primary-fixed-variant": "#564500", "on-secondary-fixed-variant": "#004b72", "on-primary-container": "#735e00", "surface-variant": "#e5e2e1", "secondary": "#166392", "secondary-container": "#8bcafe", "outline": "#7e7662", "primary": "#725c00", "on-secondary-container": "#005581", "secondary-fixed-dim": "#90cdff", "inverse-primary": "#e9c339", "surface-container-highest": "#e5e2e1", "surface-container-high": "#eae7e7", "on-error-container": "#93000a", "on-surface-variant": "#4d4634", "on-tertiary-fixed": "#3e0500", "outline-variant": "#d0c6ae", "secondary-fixed": "#cbe6ff", "surface-dim": "#dcd9d9", "on-primary-fixed": "#231b00", "on-tertiary": "#ffffff", "on-secondary-fixed": "#001e31", "primary-fixed-dim": "#e9c339", "on-surface": "#1c1b1b", "on-background": "#1c1b1b", "tertiary-fixed": "#ffdad3", "on-secondary": "#ffffff", "error": "#ba1a1a", "tertiary-container": "#ffd1c8", "surface-container-low": "#f6f3f2", "on-tertiary-container": "#a63e29", "tertiary": "#a43c28", "surface": "#fcf9f8", "surface-container-lowest": "#ffffff", "on-primary": "#ffffff", "inverse-on-surface": "#f3f0ef", "surface-tint": "#725c00", "surface-container": "#f0eded", "primary-fixed": "#ffe07e", "surface-bright": "#fcf9f8", "inverse-surface": "#313030", "background": "#fcf9f8", "on-tertiary-fixed-variant": "#842513", "error-container": "#ffdad6" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "1rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "gutter-sm": "0.75rem", "margin-tablet": "1.5rem", "gutter": "1rem", "space-xl": "2rem", "margin": "1rem", "space-lg": "1.5rem" }, "fontFamily": { "label-md": ["Space Grotesk"], "headline-sm": ["Space Grotesk"], "label-lg": ["Space Grotesk"], "body-sm": ["Inter"], "headline-xl": ["Space Grotesk"], "body-lg": ["Inter"], "headline-lg": ["Space Grotesk"], "body-md": ["Inter"], "headline-lg-mobile": ["Space Grotesk"], "label-sm": ["Space Grotesk"], "headline-md": ["Space Grotesk"], "headline-xl-mobile": ["Space Grotesk"] }, "fontSize": { "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "700" }], "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-lg": ["15px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "500" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-lg-mobile": ["24px", { "lineHeight": "30px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-xl-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }] } } } }</script></head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center justify-between px-space-md h-6 text-on-surface text-label-sm font-label-sm select-none"><span class="tracking-tight font-bold">09:41</span><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[15px]">wifi</span><span class="material-symbols-outlined text-[15px]">signal_cellular_4_bar</span><span class="material-symbols-outlined text-[15px]">battery_charging_full</span></div></div><div class="h-14 px-space-md flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs min-w-0"><button aria-label="Kembali" class="w-11 h-11 -ml-2 flex items-center justify-center rounded-full text-on-surface active:bg-surface-variant transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><img alt="DAYGUIDE App Logo" class="h-7 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/ALJJyrC0v238Bvh5B9-U1T4bw7ZV1j71QlPF1EHtmPOWTzVW1eq6CwOh1fXmNE3fMnAum0cV1B93UqA2rrllJZyWe0wBWyKBdjDX024xuw0tgPa9hGK7fgzB2DsvGTApIVdPqEaL-rlUt_HU11uUZd91f7kT32xLT-ZhPdGrWw4Q33FmXhgHxmKFgSMuWqUDPlSWTx-yQK2dLgmOS2PBRcA2olaxdps_s3XNokQBJUNcHaBo"/><h1 class="font-headline-sm text-headline-sm text-on-surface truncate ml-1">Detail Panduan</h1></div><div class="flex items-center gap-space-xs flex-shrink-0"><button aria-label="Bagikan Panduan" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface active:bg-surface-variant transition-colors"><span class="material-symbols-outlined text-[22px]">share</span></button><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIxHDkKgPcTB3GyRzCjWZ_SYFLjkriFyDRgmluJZ33erXy78qejs08Qh1Ozi_Sjqc7TFtN-_3pU1WwqUmZXHM_lu91SWjW3lmQzoFOhRHBFzm8QmbbK4hWWSVBFwW7jhntz_B0jBCjnSFx802UpKEJED5uQUy_Mg_uZ1jmlZP1xp7L3baZzX2aTVsYIV7hw73rANkIzoQJvyU3DfxDlE1VSZgGVONwTJpAkia-p_c"/></div></div></header><main class="flex flex-col relative w-full pt-20 pb-safe px-space-md bg-surface flex-grow"><div class="flex flex-col w-full pb-8 space-y-5">
+<!-- 1. Search Header Input -->
+<section class="flex flex-col w-full">
+<div class="relative flex items-center w-full">
+<div class="flex items-center w-full bg-surface-container-lowest rounded-xl p-1.5 shadow-[3px_3px_0px_#171717] transition-all" style="border: 2.5px solid #171717;">
+<span class="material-symbols-outlined text-on-surface text-[22px] ml-2 select-none">search</span>
+<input class="w-full bg-transparent px-2 py-1.5 font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant/60 focus:outline-none" id="search-input" placeholder="Cari tips masak, gadget, uang..." type="text" value="cara mengatur uang"/>
+<button aria-label="Hapus kata kunci" class="w-8 h-8 flex items-center justify-center rounded-lg text-on-surface hover:bg-surface-container active:scale-95 transition-transform flex-shrink-0" id="clear-search-btn">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<button aria-label="Cari panduan" class="h-9 px-3.5 bg-primary-container text-on-surface font-label-md text-label-md rounded-lg flex items-center gap-1 active:translate-x-[1px] active:translate-y-[1px] shadow-[2px_2px_0px_#171717] transition-transform flex-shrink-0 ml-1" id="submit-search-btn" style="border: 2px solid #171717;">
+<span>Cari</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- 2. Category Filters (Horizontal Scrolling Chips) -->
+<section class="w-full overflow-hidden -mx-space-md px-space-md">
+<div class="flex items-center gap-2 overflow-x-auto py-1 scroll-smooth no-scrollbar">
+<!-- Active Chip -->
+<button class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-primary-container text-on-surface font-label-md text-label-md shadow-[2px_2px_0px_#171717] flex-shrink-0 active:translate-x-[1px] active:translate-y-[1px]" style="border: 2px solid #171717;">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">check</span>
+<span>Semua Kategori</span>
+</button>
+<!-- Inactive Chips -->
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-label-md text-label-md flex-shrink-0 active:translate-x-[1px] active:translate-y-[1px] hover:bg-surface-container-low transition-colors" style="border: 2px solid #171717;">
+<span>Keuangan</span>
+</button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-label-md text-label-md flex-shrink-0 active:translate-x-[1px] active:translate-y-[1px] hover:bg-surface-container-low transition-colors" style="border: 2px solid #171717;">
+<span>Teknologi</span>
+</button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-label-md text-label-md flex-shrink-0 active:translate-x-[1px] active:translate-y-[1px] hover:bg-surface-container-low transition-colors" style="border: 2px solid #171717;">
+<span>Kesehatan</span>
+</button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-label-md text-label-md flex-shrink-0 active:translate-x-[1px] active:translate-y-[1px] hover:bg-surface-container-low transition-colors" style="border: 2px solid #171717;">
+<span>Rumah Tangga</span>
+</button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-label-md text-label-md flex-shrink-0 active:translate-x-[1px] active:translate-y-[1px] hover:bg-surface-container-low transition-colors" style="border: 2px solid #171717;">
+<span>Pendidikan</span>
+</button>
+</div>
+</section>
+<!-- 3. Pencarian Populer (Trending Tags) -->
+<section class="flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-tertiary text-[20px]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Pencarian Populer</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider bg-surface-container-high px-2 py-0.5 rounded-md">Tren Hari Ini</span>
+</div>
+<div class="flex flex-wrap gap-2">
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-surface-container-lowest rounded-xl text-on-surface font-body-sm text-body-sm shadow-[2px_2px_0px_#171717] active:translate-x-[1px] active:translate-y-[1px]" style="border: 2px solid #171717;">
+<span>🔥 Budgeting 50/30/20</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-surface-container-lowest rounded-xl text-on-surface font-body-sm text-body-sm shadow-[2px_2px_0px_#171717] active:translate-x-[1px] active:translate-y-[1px]" style="border: 2px solid #171717;">
+<span>💻 Pasang SSD Laptop</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-surface-container-lowest rounded-xl text-on-surface font-body-sm text-body-sm shadow-[2px_2px_0px_#171717] active:translate-x-[1px] active:translate-y-[1px]" style="border: 2px solid #171717;">
+<span>📄 Bikin NPWP Online</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-surface-container-lowest rounded-xl text-on-surface font-body-sm text-body-sm shadow-[2px_2px_0px_#171717] active:translate-x-[1px] active:translate-y-[1px]" style="border: 2px solid #171717;">
+<span>🌱 Kompos Sampah Organik</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-surface-container-lowest rounded-xl text-on-surface font-body-sm text-body-sm shadow-[2px_2px_0px_#171717] active:translate-x-[1px] active:translate-y-[1px]" style="border: 2px solid #171717;">
+<span>😴 Tidur Nyenyak 8 Jam</span>
+</button>
+</div>
+</section>
+<!-- 4. Riwayat Pencarian Terakhir -->
+<section class="flex flex-col bg-surface-container-low rounded-xl p-3.5 space-y-2.5" id="recent-search-section" style="border: 2px solid #171717;">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-on-surface">history</span>
+<h3 class="font-label-lg text-label-lg text-on-surface">Riwayat Terakhir</h3>
+</div>
+<button class="font-label-sm text-label-sm text-tertiary hover:underline active:opacity-75" id="clear-all-history">
+        Hapus Semua Riwayat
+      </button>
+</div>
+<div class="flex flex-col space-y-1.5">
+<div class="recent-row flex items-center justify-between py-1 px-2 rounded-lg bg-surface-container-lowest" style="border: 1.5px solid #171717;">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant flex-shrink-0">schedule</span>
+<span class="font-body-sm text-body-sm text-on-surface truncate">investasi reksadana pemula</span>
+</div>
+<button aria-label="Hapus kata kunci ini" class="delete-history-btn p-1 text-on-surface-variant hover:text-error active:scale-90">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+<div class="recent-row flex items-center justify-between py-1 px-2 rounded-lg bg-surface-container-lowest" style="border: 1.5px solid #171717;">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant flex-shrink-0">schedule</span>
+<span class="font-body-sm text-body-sm text-on-surface truncate">cara perpanjang SIM online</span>
+</div>
+<button aria-label="Hapus kata kunci ini" class="delete-history-btn p-1 text-on-surface-variant hover:text-error active:scale-90">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+</div>
+</section>
+<!-- 5. Hasil Pencarian Terkait (Search Results - 3 Cards) -->
+<section class="flex flex-col space-y-3 pt-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Hasil Pencarian</h2>
+<span class="px-2 py-0.5 bg-secondary-container text-on-secondary-container font-label-sm text-label-sm rounded-full" style="border: 1.5px solid #171717;">3 Panduan</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span class="font-label-sm text-label-sm">Relevansi</span>
+</div>
+</div>
+<!-- Card 1 -->
+<article class="flex flex-col bg-surface-container-lowest rounded-xl p-3.5 shadow-[3px_3px_0px_#171717] active:translate-x-[1px] active:translate-y-[1px] transition-transform space-y-3 cursor-pointer" style="border: 2.5px solid #171717;">
+<div class="flex items-start gap-3">
+<div class="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0 relative" style="border: 2px solid #171717;">
+<img class="w-full h-full object-cover" data-alt="A neat organized desktop arrangement with a clean pastel notebook, yellow calculator, and stacked coins illustrating financial budgeting method 50/30/20 in modern studio lighting, vibrant neobrutalism aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDm8FXo6oMu5SoReCykcOHDEEkwo_3vz6fRnwyEuEWg-K1EK4ZV-SRM0ZKlkhIvQleJby8xl8PZydQesMebxn2QFZt7JLLeTIuXo72UPv1z-SewX1CsuQJocnKG5KnDdWKzdmOUebewGKPAP5kUcbkOmKJhnSeIDiTWdYaKEtPKBwv6rJk1DeyPTj0h3UXe638jBMYq4pi50Bzoj8GYVtMEeQzNCbUZ73lFVsGxa38"/>
+<span class="absolute bottom-1 right-1 bg-surface-container-lowest/90 px-1 py-0.5 rounded font-label-sm text-[10px] text-on-surface font-bold leading-none" style="border: 1px solid #171717;">50:30:20</span>
+</div>
+<div class="flex flex-col justify-between flex-grow min-w-0">
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="px-2 py-0.5 bg-primary-container text-on-surface font-label-sm text-[11px] rounded-full" style="border: 1.5px solid #171717;">Keuangan</span>
+<span class="inline-flex items-center gap-0.5 font-label-sm text-[11px] text-secondary font-bold">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+              98% Cocok
+            </span>
+</div>
+<h3 class="font-headline-sm text-[15px] leading-tight text-on-surface line-clamp-2">
+            Cara Mengatur Keuangan Bulanan dengan Metode 50/30/20
+          </h3>
+<div class="flex items-center gap-3 text-on-surface-variant font-body-sm text-[12px] mt-1.5">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">timer</span>
+              5 mnt
+            </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">file_upload_off</span>
+              Pemula
+            </span>
+</div>
+</div>
+</div>
+<div class="pt-2 flex items-center justify-between border-t border-dashed" style="border-top-color: #171717; border-top-width: 1.5px;">
+<span class="font-body-sm text-[12px] text-on-surface-variant">Langkah terstruktur • 4 Checklist</span>
+<button class="h-7 px-3 bg-primary text-on-primary font-label-sm text-label-sm rounded-lg flex items-center gap-1 active:scale-95" style="border: 1.5px solid #171717;">
+<span>Baca</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="flex flex-col bg-surface-container-lowest rounded-xl p-3.5 shadow-[3px_3px_0px_#171717] active:translate-x-[1px] active:translate-y-[1px] transition-transform space-y-3 cursor-pointer" style="border: 2.5px solid #171717;">
+<div class="flex items-start gap-3">
+<div class="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0 relative" style="border: 2px solid #171717;">
+<img class="w-full h-full object-cover" data-alt="A vivid flatlay of fresh supermarket groceries with crisp green vegetables, organic fruits, and a neat grocery budget list on textured paper, colorful Neobrutalism high key lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6wHID2GUf2t1hGeNxl8HoSd6ioSVniD8UdBdd4YGWWelehrWwcucfU79Q6PdFX-DmSCd6pkaKsbl7erQ6tAkYh6nWnQ0xmEHjoxAqteJHU4t2aDywrp4TXqVdNmytEZRhZ5iB2YVJlwW5YQagwOvnVN2T7qjl_OZSdg7bz7LckWXP2shaYW9OQiQ1eQ8qGZ28sS_Lk_aZNt-MobPMW48PxMLlI2-_MjdiwaJSYwc"/>
+<span class="absolute bottom-1 right-1 bg-surface-container-lowest/90 px-1 py-0.5 rounded font-label-sm text-[10px] text-on-surface font-bold leading-none" style="border: 1px solid #171717;">Tips Hemat</span>
+</div>
+<div class="flex flex-col justify-between flex-grow min-w-0">
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="px-2 py-0.5 bg-secondary-container text-on-secondary-container font-label-sm text-[11px] rounded-full" style="border: 1.5px solid #171717;">Keuangan</span>
+<span class="inline-flex items-center gap-0.5 font-label-sm text-[11px] text-secondary font-bold">
+<span class="material-symbols-outlined text-[13px]">bolt</span>
+              85% Cocok
+            </span>
+</div>
+<h3 class="font-headline-sm text-[15px] leading-tight text-on-surface line-clamp-2">
+            Tips Berhemat Belanja Mingguan di Supermarket Tanpa Rugi
+          </h3>
+<div class="flex items-center gap-3 text-on-surface-variant font-body-sm text-[12px] mt-1.5">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">timer</span>
+              4 mnt
+            </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">sentiment_satisfied</span>
+              Mudah
+            </span>
+</div>
+</div>
+</div>
+<div class="pt-2 flex items-center justify-between border-t border-dashed" style="border-top-color: #171717; border-top-width: 1.5px;">
+<span class="font-body-sm text-[12px] text-on-surface-variant">Panduan belanja cerdas &amp; meal plan</span>
+<button class="h-7 px-3 bg-surface-container text-on-surface font-label-sm text-label-sm rounded-lg flex items-center gap-1 active:scale-95" style="border: 1.5px solid #171717;">
+<span>Baca</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="flex flex-col bg-surface-container-lowest rounded-xl p-3.5 shadow-[3px_3px_0px_#171717] active:translate-x-[1px] active:translate-y-[1px] transition-transform space-y-3 cursor-pointer" style="border: 2.5px solid #171717;">
+<div class="flex items-start gap-3">
+<div class="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0 relative" style="border: 2px solid #171717;">
+<img class="w-full h-full object-cover" data-alt="Digital banking application interface on a smartphone screen showing digital envelope savings pockets, styled with bold graphic illustrations, vibrant colors, and soft clean lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlHEnHsGg4pDMDZyw0dJ8i9awL4xD9-QDGhWirayVo_OaLSXIqE8aZ0o2syvE5abbxlAPVAGpPyc7jmIVPuGAMMnGKeFlsfaTxnXPk9Ugz61pYcCR__xjg9ZoJIKE7KkXQj8_obmM4oN4l1ZnNK4QoF84WUlSkvJbFcDQkRK2cycr1MoIJ6i1Q0v1ODDngGMyuKLZ7gOrpjyI1O3R3U9nKoC8pi2owTsJaQkDp5Ps"/>
+<span class="absolute bottom-1 right-1 bg-surface-container-lowest/90 px-1 py-0.5 rounded font-label-sm text-[10px] text-on-surface font-bold leading-none" style="border: 1px solid #171717;">Rp 0 Admin</span>
+</div>
+<div class="flex flex-col justify-between flex-grow min-w-0">
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="px-2 py-0.5 bg-tertiary-container text-on-tertiary-container font-label-sm text-[11px] rounded-full" style="border: 1.5px solid #171717;">Keuangan</span>
+<span class="inline-flex items-center gap-0.5 font-label-sm text-[11px] text-on-surface-variant font-bold">
+              80% Cocok
+            </span>
+</div>
+<h3 class="font-headline-sm text-[15px] leading-tight text-on-surface line-clamp-2">
+            Membuat Rekening Tabungan Terpisah Tanpa Biaya Admin
+          </h3>
+<div class="flex items-center gap-3 text-on-surface-variant font-body-sm text-[12px] mt-1.5">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">timer</span>
+              6 mnt
+            </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">chrome_extension_off</span>
+              Menengah
+            </span>
+</div>
+</div>
+</div>
+<div class="pt-2 flex items-center justify-between border-t border-dashed" style="border-top-color: #171717; border-top-width: 1.5px;">
+<span class="font-body-sm text-[12px] text-on-surface-variant">Komparasi 4 bank digital terpercaya</span>
+<button class="h-7 px-3 bg-surface-container text-on-surface font-label-sm text-label-sm rounded-lg flex items-center gap-1 active:scale-95" style="border: 1.5px solid #171717;">
+<span>Baca</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</div>
+</article>
+</section>
+<!-- 6. Empty State / Request Guide Callout Card -->
+<section class="mt-2 w-full">
+<div class="relative overflow-hidden bg-tertiary-container rounded-2xl p-4 shadow-[3px_3px_0px_#171717] flex items-center justify-between gap-3" style="border: 2.5px solid #171717;">
+<div class="flex items-start gap-3 min-w-0">
+<div class="w-10 h-10 rounded-full bg-surface-container-lowest flex items-center justify-center flex-shrink-0 text-tertiary" style="border: 2px solid #171717;">
+<span class="material-symbols-outlined text-[22px]">lightbulb</span>
+</div>
+<div class="flex flex-col min-w-0">
+<p class="font-label-md text-label-md text-on-tertiary-container">Belum nemu tips yang pas?</p>
+<p class="font-body-sm text-body-sm text-on-tertiary-container/90 line-clamp-1">Ajukan topik panduan yang kamu butuhkan!</p>
+</div>
+</div>
+<button class="h-9 px-3 bg-tertiary text-on-tertiary font-label-md text-[12px] rounded-xl flex items-center gap-1 shadow-[2px_2px_0px_#171717] active:translate-x-[1px] active:translate-y-[1px] flex-shrink-0 transition-transform" style="border: 2px solid #171717;">
+<span>Ajukan</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</section>
+</div>
+<script>
+  // Simple client-side micro-interactions
+  const searchInput = document.getElementById('search-input');
+  const clearBtn = document.getElementById('clear-search-btn');
+  const clearAllHistoryBtn = document.getElementById('clear-all-history');
+  const recentSection = document.getElementById('recent-search-section');
+
+  if (clearBtn && searchInput) {
+    clearBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      searchInput.focus();
+    });
+  }
+
+  // Clear single recent search item
+  document.querySelectorAll('.delete-history-btn').forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const row = btn.closest('.recent-row');
+      if (row) {
+        row.style.opacity = '0';
+        row.style.transform = 'scale(0.95)';
+        row.style.transition = 'all 0.15s ease-out';
+        setTimeout(() => row.remove(), 150);
+      }
+    });
+  });
+
+  // Clear all recent searches
+  if (clearAllHistoryBtn && recentSection) {
+    clearAllHistoryBtn.addEventListener('click', () => {
+      recentSection.style.opacity = '0';
+      recentSection.style.transition = 'opacity 0.2s ease-out';
+      setTimeout(() => {
+        recentSection.innerHTML = '<p class="font-body-sm text-body-sm text-on-surface-variant text-center py-2">Semua riwayat pencarian telah dibersihkan.</p>';
+        recentSection.style.opacity = '1';
+      }, 200);
+    });
+  }
+</script></main></body></html>
