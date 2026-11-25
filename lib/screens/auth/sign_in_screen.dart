@@ -185,8 +185,8 @@ class _SignInScreenState extends State<SignInScreen> {
                     Row(
                       children: [
                         Container(
-                          width: 44,
-                          height: 44,
+                          width: 48,
+                          height: 48,
                           decoration: BoxDecoration(
                             color: AppColors.primaryContainer,
                             borderRadius: BorderRadius.circular(12),
@@ -199,8 +199,17 @@ class _SignInScreenState extends State<SignInScreen> {
                               ),
                             ],
                           ),
-                          child: const Center(
-                            child: Icon(Icons.explore, size: 24, color: AppColors.ink),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: Image.asset(
+                              'assets/images/app_logo.png',
+                              fit: BoxFit.cover,
+                              errorBuilder: (context, error, stackTrace) {
+                                return const Center(
+                                  child: Icon(Icons.explore, size: 24, color: AppColors.ink),
+                                );
+                              },
+                            ),
                           ),
                         ),
                         const SizedBox(width: 10),

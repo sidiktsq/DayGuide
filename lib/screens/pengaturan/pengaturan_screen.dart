@@ -14,12 +14,154 @@ import '../auth/sign_in_screen.dart';
 class PengaturanScreen extends StatelessWidget {
   const PengaturanScreen({super.key});
 
+  void _showInfoDialog(BuildContext context, String title, String content) {
+    showDialog(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        backgroundColor: AppColors.background,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16),
+          side: const BorderSide(color: AppColors.border, width: 2.5),
+        ),
+        title: Text(title, style: AppTypography.headlineSm()),
+        content: SingleChildScrollView(
+          child: Text(content, style: AppTypography.bodyMd()),
+        ),
+        actions: [
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: AppColors.primaryContainer,
+              foregroundColor: AppColors.ink,
+              elevation: 0,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(8),
+                side: const BorderSide(color: AppColors.border, width: 1.5),
+              ),
+            ),
+            onPressed: () => Navigator.pop(ctx),
+            child: const Text('Tutup'),
+          ),
+        ],
+      ),
+    );
+  }
+
+  void _showClearCacheDialog(BuildContext context, ThemeSettingsProvider settings) {
+    showDialog(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        backgroundColor: AppColors.background,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16),
+          side: const BorderSide(color: AppColors.border, width: 2.5),
+        ),
+        title: Row(
+          children: [
+            const Icon(Icons.cleaning_services, color: AppColors.tertiary, size: 24),
+            const SizedBox(width: 8),
+            Text('Hapus Cache', style: AppTypography.headlineSm()),
+          ],
+        ),
+        content: Text(
+          'Apakah Anda yakin ingin menghapus data sementara dan cache gambar (${settings.cacheSize})? Panduan tersimpan Anda tidak akan terhapus.',
+          style: AppTypography.bodyMd(),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(ctx),
+            child: Text('Batal', style: AppTypography.labelMd()),
+          ),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: AppColors.tertiaryContainer,
+              foregroundColor: AppColors.ink,
+              elevation: 0,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(8),
+                side: const BorderSide(color: AppColors.border, width: 1.5),
+              ),
+            ),
+            onPressed: () {
+              Navigator.pop(ctx);
+              settings.clearCache();
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  backgroundColor: AppColors.ink,
+                  content: Text('Cache berhasil dibersihkan (0.0 MB)!', style: AppTypography.bodyMd(color: AppColors.cardWhite)),
+                  behavior: SnackBarBehavior.floating,
+                ),
+              );
+            },
+            child: const Text('Bersihkan'),
+          ),
+        ],
+      ),
+    );
+  }
+
+  void _showLogoutDialog(BuildContext context, AuthProvider auth, BookmarkProvider bookmarks, HistoryProvider history) {
+    showDialog(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        backgroundColor: AppColors.background,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16),
+          side: const BorderSide(color: AppColors.border, width: 2.5),
+        ),
+        title: Row(
+          children: [
+            const Icon(Icons.logout, color: AppColors.tertiary, size: 24),
+            const SizedBox(width: 8),
+            Text('Keluar Akun', style: AppTypography.headlineSm()),
+          ],
+        ),
+        content: Text(
+          'Apakah Anda yakin ingin keluar dari akun? Setelah keluar, Anda wajib login kembali saat membuka aplikasi.',
+          style: AppTypography.bodyMd(),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(ctx),
+            child: Text('Batal', style: AppTypography.labelMd()),
+          ),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: AppColors.softRed,
+              foregroundColor: AppColors.ink,
+              elevation: 0,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(8),
+                side: const BorderSide(color: AppColors.border, width: 1.5),
+              ),
+            ),
+            onPressed: () async {
+              Navigator.pop(ctx);
+              await auth.logout();
+              await bookmarks.clearAll();
+              await history.clearAll();
+              if (!context.mounted) return;
+              Navigator.pushAndRemoveUntil(
+                context,
+                MaterialPageRoute(builder: (_) => const SignInScreen()),
+                (route) => false,
+              );
+            },
+            child: const Text('Ya, Keluar'),
+          ),
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final settings = Provider.of<ThemeSettingsProvider>(context);
+    final auth = Provider.of<AuthProvider>(context);
+    final bookmarks = Provider.of<BookmarkProvider>(context);
+    final history = Provider.of<HistoryProvider>(context);
 
     return Scaffold(
-      backgroundColor: AppColors.background,
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       appBar: const AppTopBar(title: 'Pengaturan', showBackButton: true),
       body: SafeArea(
         child: SingleChildScrollView(
@@ -70,8 +212,7 @@ class PengaturanScreen extends StatelessWidget {
                       title: 'Gelap',
                       emoji: '🌙',
                       isActive: settings.themeMode == 'dark',
-                      isSoon: true,
-                      onTap: () {},
+                      onTap: () => settings.setThemeMode('dark'),
                     ),
                   ),
                   const SizedBox(width: 8),
@@ -86,6 +227,7 @@ class PengaturanScreen extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 12),
+
               // Font Size Selector
               NeobrutalistCard(
                 backgroundColor: AppColors.cardWhite,
@@ -110,7 +252,7 @@ class PengaturanScreen extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text('Ukuran Teks', style: AppTypography.labelMd()),
-                          Text('Sedang (Standar DAYGUIDE)', style: AppTypography.bodySm()),
+                          Text('Skala: ${(settings.fontScale * 100).toInt()}% • Real-time', style: AppTypography.bodySm()),
                         ],
                       ),
                     ),
@@ -119,7 +261,7 @@ class PengaturanScreen extends StatelessWidget {
                         GestureDetector(
                           onTap: settings.decreaseFontSize,
                           child: Container(
-                            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
                             decoration: BoxDecoration(
                               color: AppColors.surfaceContainerLow,
                               borderRadius: BorderRadius.circular(6),
@@ -135,7 +277,7 @@ class PengaturanScreen extends StatelessWidget {
                         GestureDetector(
                           onTap: settings.increaseFontSize,
                           child: Container(
-                            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
                             decoration: BoxDecoration(
                               color: AppColors.primaryContainer,
                               borderRadius: BorderRadius.circular(6),
@@ -153,42 +295,36 @@ class PengaturanScreen extends StatelessWidget {
 
               // SECTION 2: Notifikasi & Pengingat
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Row(
-                    children: [
-                      const Icon(Icons.notifications_active, size: 18, color: AppColors.primary),
-                      const SizedBox(width: 6),
-                      Text('NOTIFIKASI & PENGINGAT', style: AppTypography.labelMd()),
-                    ],
-                  ),
-                  Text('3 Opsi', style: AppTypography.bodySm()),
+                  const Icon(Icons.notifications_active, size: 18, color: AppColors.secondary),
+                  const SizedBox(width: 6),
+                  Text('NOTIFIKASI & PENGINGAT', style: AppTypography.labelMd()),
                 ],
               ),
               const SizedBox(height: 10),
               _buildToggleItem(
-                icon: Icons.wb_sunny,
-                iconBg: AppColors.primaryFixed,
-                title: 'Tips Harian Setiap Pagi',
-                subtitle: '07:00 WIB (Sarapan ilmu praktis)',
+                icon: Icons.lightbulb,
+                iconBg: AppColors.primaryContainer,
+                title: 'Tips Pagi Harian',
+                subtitle: 'Ringkasan panduan praktis setiap jam 07.00 pagi',
                 isActive: settings.dailyMorningTips,
                 onToggle: settings.toggleDailyMorningTips,
               ),
               const SizedBox(height: 8),
               _buildToggleItem(
                 icon: Icons.auto_awesome,
-                iconBg: AppColors.secondaryContainer,
-                title: 'Rekomendasi Panduan Baru',
-                subtitle: 'Kompilasi praktis setiap Senin',
+                iconBg: AppColors.mint,
+                title: 'Rekomendasi Mingguan',
+                subtitle: 'Kurasi topik pilihan editor setiap hari Senin',
                 isActive: settings.weeklyRecommendations,
                 onToggle: settings.toggleWeeklyRecommendations,
               ),
               const SizedBox(height: 8),
               _buildToggleItem(
-                icon: Icons.bookmark_add,
-                iconBg: AppColors.surfaceContainerHigh,
-                title: 'Pengingat Lanjut Membaca',
-                subtitle: 'Sentil jika ada panduan tertunda',
+                icon: Icons.alarm,
+                iconBg: AppColors.lavender,
+                title: 'Pengingat Membaca',
+                subtitle: 'Alarm untuk melanjutkan panduan yang belum selesai',
                 isActive: settings.readingReminders,
                 onToggle: settings.toggleReadingReminders,
               ),
@@ -249,20 +385,12 @@ class PengaturanScreen extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text('Hapus Cache Penyimpanan', style: AppTypography.labelMd()),
-                          Text('12.5 MB • File sementara & gambar', style: AppTypography.bodySm()),
+                          Text('${settings.cacheSize} • File sementara & gambar', style: AppTypography.bodySm()),
                         ],
                       ),
                     ),
                     GestureDetector(
-                      onTap: () {
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(
-                            backgroundColor: AppColors.ink,
-                            content: Text('Cache berhasil dibersihkan!', style: AppTypography.bodyMd(color: AppColors.cardWhite)),
-                            behavior: SnackBarBehavior.floating,
-                          ),
-                        );
-                      },
+                      onTap: () => _showClearCacheDialog(context, settings),
                       child: Container(
                         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
                         decoration: BoxDecoration(
@@ -278,110 +406,63 @@ class PengaturanScreen extends StatelessWidget {
               ),
               const SizedBox(height: 20),
 
-              // SECTION 4: Akun & Sesi
+              // SECTION 4: Akun & Sesi Pengguna
               Text('AKUN & SESI PENGGUNA', style: AppTypography.labelMd()),
               const SizedBox(height: 10),
-              Consumer<AuthProvider>(
-                builder: (context, auth, _) {
-                  return NeobrutalistCard(
-                    backgroundColor: AppColors.cardWhite,
-                    borderRadius: 14,
-                    padding: const EdgeInsets.all(12),
-                    child: Column(
+              NeobrutalistCard(
+                backgroundColor: AppColors.cardWhite,
+                borderRadius: 14,
+                padding: const EdgeInsets.all(12),
+                child: Column(
+                  children: [
+                    Row(
                       children: [
-                        Row(
-                          children: [
-                            Container(
-                              width: 38,
-                              height: 38,
-                              decoration: BoxDecoration(
-                                color: AppColors.primaryContainer,
-                                borderRadius: BorderRadius.circular(8),
-                                border: Border.all(color: AppColors.border, width: 1.5),
-                              ),
-                              child: const Center(
-                                child: Icon(Icons.account_circle, size: 22, color: AppColors.ink),
-                              ),
-                            ),
-                            const SizedBox(width: 12),
-                            Expanded(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(auth.userName, style: AppTypography.labelMd()),
-                                  Text(
-                                    auth.userEmail.isNotEmpty ? auth.userEmail : 'Level ${auth.userLevel} • ${auth.userRank}',
-                                    style: AppTypography.bodySm(),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
+                        Container(
+                          width: 42,
+                          height: 42,
+                          decoration: BoxDecoration(
+                            color: AppColors.primaryContainer,
+                            borderRadius: BorderRadius.circular(10),
+                            border: Border.all(color: AppColors.border, width: 2),
+                          ),
+                          child: const Center(
+                            child: Icon(Icons.person, size: 26, color: AppColors.ink),
+                          ),
                         ),
-                        const SizedBox(height: 12),
-                        const Divider(color: AppColors.border, thickness: 1),
-                        const SizedBox(height: 8),
-                        NeobrutalistButton(
-                          width: double.infinity,
-                          height: 44,
-                          backgroundColor: AppColors.softRed,
-                          onPressed: () {
-                            showDialog(
-                              context: context,
-                              builder: (ctx) => AlertDialog(
-                                backgroundColor: AppColors.background,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(16),
-                                  side: const BorderSide(color: AppColors.border, width: 2.5),
-                                ),
-                                title: Text('Keluar dari Akun', style: AppTypography.headlineSm()),
-                                content: Text(
-                                  'Apakah Anda yakin ingin keluar? Anda harus masuk kembali untuk mengakses panduan.',
-                                  style: AppTypography.bodyMd(),
-                                ),
-                                actions: [
-                                  TextButton(
-                                    onPressed: () => Navigator.pop(ctx),
-                                    child: const Text('Batal'),
-                                  ),
-                                  ElevatedButton(
-                                    style: ElevatedButton.styleFrom(
-                                      backgroundColor: AppColors.softRed,
-                                      foregroundColor: AppColors.ink,
-                                    ),
-                                    onPressed: () async {
-                                      Navigator.pop(ctx);
-                                      final bookmarks = Provider.of<BookmarkProvider>(context, listen: false);
-                                      final history = Provider.of<HistoryProvider>(context, listen: false);
-                                      auth.logout();
-                                      await bookmarks.clearAll();
-                                      await history.clearAll();
-                                      if (!context.mounted) return;
-                                      Navigator.pushAndRemoveUntil(
-                                        context,
-                                        MaterialPageRoute(builder: (_) => const SignInScreen()),
-                                        (route) => false,
-                                      );
-                                    },
-                                    child: const Text('Ya, Keluar'),
-                                  ),
-                                ],
-                              ),
-                            );
-                          },
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
+                        const SizedBox(width: 12),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              const Icon(Icons.logout, size: 18, color: AppColors.ink),
-                              const SizedBox(width: 6),
-                              Text('Keluar Akun', style: AppTypography.labelMd()),
+                              Text(auth.userName, style: AppTypography.headlineSm()),
+                              Text(
+                                auth.userEmail.isNotEmpty ? auth.userEmail : 'Akun Aktif • Level ${auth.userLevel}',
+                                style: AppTypography.bodySm(),
+                              ),
                             ],
                           ),
                         ),
                       ],
                     ),
-                  );
-                },
+                    const SizedBox(height: 12),
+                    const Divider(color: AppColors.border, thickness: 1),
+                    const SizedBox(height: 8),
+                    NeobrutalistButton(
+                      width: double.infinity,
+                      height: 46,
+                      backgroundColor: AppColors.softRed,
+                      onPressed: () => _showLogoutDialog(context, auth, bookmarks, history),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const Icon(Icons.logout, size: 18, color: AppColors.ink),
+                          const SizedBox(width: 6),
+                          Text('Keluar dari Akun (Logout)', style: AppTypography.labelMd(color: AppColors.ink)),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
               ),
               const SizedBox(height: 20),
 
@@ -394,11 +475,41 @@ class PengaturanScreen extends StatelessWidget {
                 padding: const EdgeInsets.all(12),
                 child: Column(
                   children: [
-                    _buildLegalRow('Kebijakan Privasi', 'Data Anda aman dan tidak dijual ke pihak ketiga'),
+                    _buildLegalRow(
+                      'Kebijakan Privasi',
+                      'Data Anda aman dan tidak dijual ke pihak ketiga',
+                      onTap: () {
+                        _showInfoDialog(
+                          context,
+                          'Kebijakan Privasi DAYGUIDE',
+                          'DAYGUIDE berkomitmen melindungi privasi data setiap pengguna. Seluruh progres baca, panduan tersimpan, dan akun Anda disimpan secara aman di perangkat lokal dan cloud terenkripsi. Kami tidak membagikan atau menjual data pribadi kepada pihak ketiga mana pun.',
+                        );
+                      },
+                    ),
                     const Divider(color: AppColors.border, thickness: 1),
-                    _buildLegalRow('Syarat & Ketentuan Penggunaan', 'Ketentuan lisensi konten edukasi'),
+                    _buildLegalRow(
+                      'Syarat & Ketentuan Penggunaan',
+                      'Ketentuan lisensi konten edukasi harian',
+                      onTap: () {
+                        _showInfoDialog(
+                          context,
+                          'Syarat & Ketentuan',
+                          'Seluruh konten panduan, kurasi langkah, dan tips harian di DAYGUIDE disajikan untuk tujuan edukasi dan peningkatan produktivitas hidup sehari-hari. Pengguna bebas memanfaatkan materi panduan untuk keperluan personal non-komersial.',
+                        );
+                      },
+                    ),
                     const Divider(color: AppColors.border, thickness: 1),
-                    _buildLegalRow('Tentang DAYGUIDE (Versi 1.0.0)', 'Aplikasi panduan sehari-hari Neobrutalisme'),
+                    _buildLegalRow(
+                      'Tentang DAYGUIDE (Versi 1.0.0)',
+                      'Aplikasi panduan sehari-hari bergaya Modern Neobrutalisme',
+                      onTap: () {
+                        _showInfoDialog(
+                          context,
+                          'Tentang DAYGUIDE v1.0.0',
+                          'DAYGUIDE adalah aplikasi panduan hidup sehari-hari yang dirancang dengan sistem desain Modern Neobrutalisme. Menyajikan tutorial finansial, teknologi, rumah tangga, kesehatan, dan kebiasaan produktif harian dalam langkah-langkah praktis dan terstruktur.',
+                        );
+                      },
+                    ),
                   ],
                 ),
               ),
@@ -414,11 +525,10 @@ class PengaturanScreen extends StatelessWidget {
     required String title,
     required String emoji,
     required bool isActive,
-    bool isSoon = false,
     required VoidCallback onTap,
   }) {
     return GestureDetector(
-      onTap: isSoon ? null : onTap,
+      onTap: onTap,
       child: Container(
         padding: const EdgeInsets.all(12),
         decoration: BoxDecoration(
@@ -440,8 +550,8 @@ class PengaturanScreen extends StatelessWidget {
             Text(title, style: AppTypography.labelSm()),
             if (isActive)
               Text('(Aktif)', style: AppTypography.labelSm(color: AppColors.primary))
-            else if (isSoon)
-              Text('Segera', style: AppTypography.labelSm(color: AppColors.onSurfaceVariant)),
+            else
+              const SizedBox(height: 14),
           ],
         ),
       ),
@@ -513,22 +623,26 @@ class PengaturanScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildLegalRow(String title, String subtitle) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 6),
-      child: Row(
-        children: [
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(title, style: AppTypography.labelMd()),
-                Text(subtitle, style: AppTypography.bodySm()),
-              ],
+  Widget _buildLegalRow(String title, String subtitle, {required VoidCallback onTap}) {
+    return GestureDetector(
+      onTap: onTap,
+      behavior: HitTestBehavior.opaque,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 8),
+        child: Row(
+          children: [
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(title, style: AppTypography.labelMd()),
+                  Text(subtitle, style: AppTypography.bodySm()),
+                ],
+              ),
             ),
-          ),
-          const Icon(Icons.arrow_forward_ios, size: 14, color: AppColors.ink),
-        ],
+            const Icon(Icons.arrow_forward_ios, size: 14, color: AppColors.ink),
+          ],
+        ),
       ),
     );
   }
